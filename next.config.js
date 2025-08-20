@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  distDir: 'out',
+  distDir: 'build',
   images: {
     unoptimized: true
   },
@@ -33,4 +33,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig; 
+module.exports = nextConfig; 

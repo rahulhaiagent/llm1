@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   
   if (!model) {
     return {
-      title: 'Model Not Found | LLM Leaderboard',
+      title: 'Model Not Found | LLM Decision Hub',
       description: 'The requested AI model could not be found. Browse our comprehensive leaderboard of language models.',
     };
   }
@@ -117,7 +117,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       title: pageTitle,
       description: pageDescription,
       url: `https://llmleaderboard.ai/model/${params.id}`,
-      siteName: 'LLM Leaderboard',
+      siteName: 'LLM Decision Hub',
       images: [
         {
           url: '/hai-cover.png',

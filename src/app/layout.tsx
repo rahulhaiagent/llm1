@@ -3,8 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/SEO/StructuredData'
-import { AuthProvider } from '@/contexts/AuthContext'
-import ProtectedRoute from '@/components/ProtectedRoute'
+
 import dynamic from 'next/dynamic'
 
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false })
@@ -13,8 +12,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'LLM Leaderboard - AI Model Rankings & Benchmarks | Holistic AI',
-    template: '%s | LLM Leaderboard'
+    default: 'LLM Decision Hub - AI Model Rankings & Benchmarks | Holistic AI',
+    template: '%s | LLM Decision Hub'
   },
   description: 'Compare AI language models with comprehensive rankings based on performance, safety, cost, and real-world benchmarks. Find the best LLM for your needs - GPT-4, Claude, Gemini & more.',
   keywords: [
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Holistic AI', url: 'https://holisticai.com' }],
   creator: 'Holistic AI',
   publisher: 'Holistic AI',
-  applicationName: 'LLM Leaderboard',
+  applicationName: 'LLM Decision Hub',
   generator: 'Next.js',
   referrer: 'origin-when-cross-origin',
   formatDetection: {
@@ -41,15 +40,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://llmleaderboard.ai',
-    title: 'LLM Leaderboard - AI Model Rankings & Benchmarks',
+    title: 'LLM Decision Hub - AI Model Rankings & Benchmarks',
     description: 'Compare AI language models with comprehensive rankings based on performance, safety, cost, and real-world benchmarks. Find the best LLM for your needs.',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',
         width: 1200,
         height: 630,
-        alt: 'LLM Leaderboard - AI Model Rankings and Benchmarks by Holistic AI',
+        alt: 'LLM Decision Hub - AI Model Rankings and Benchmarks by Holistic AI',
         type: 'image/png',
       },
     ],
@@ -58,11 +57,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@holisticai',
     creator: '@holisticai',
-    title: 'LLM Leaderboard - AI Model Rankings & Benchmarks',
+    title: 'LLM Decision Hub - AI Model Rankings & Benchmarks',
     description: 'Compare AI language models with comprehensive rankings based on performance, safety, cost, and real-world benchmarks.',
     images: {
       url: '/hai-cover.png',
-      alt: 'LLM Leaderboard - AI Model Rankings and Benchmarks',
+      alt: 'LLM Decision Hub - AI Model Rankings and Benchmarks',
     },
   },
   robots: {
@@ -118,7 +117,7 @@ export default function RootLayout({
         <StructuredData
           type="website"
           data={{
-            name: 'LLM Leaderboard',
+            name: 'LLM Decision Hub',
             description: 'Compare AI language models with comprehensive rankings based on performance, safety, cost, and real-world benchmarks.',
             url: 'https://llmleaderboard.ai',
             publisher: {
@@ -129,16 +128,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <AuthProvider>
-          <ProtectedRoute>
-            <div className="min-h-screen flex flex-col">
-              <div className="flex-grow">
-                {children}
-              </div>
-              <Footer />
-            </div>
-          </ProtectedRoute>
-        </AuthProvider>
+        <div className="min-h-screen flex flex-col">
+          <div className="flex-grow">
+            {children}
+          </div>
+          <Footer />
+        </div>
         <CookieConsent />
       </body>
     </html>

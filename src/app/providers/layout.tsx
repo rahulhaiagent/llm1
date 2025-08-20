@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'AI Model Providers - OpenAI, Anthropic, Google & More',
     description: 'Browse AI model providers and their offerings. Compare OpenAI, Anthropic, Google, Meta, DeepSeek and other LLM providers.',
     url: 'https://llmleaderboard.ai/providers',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

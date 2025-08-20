@@ -172,10 +172,8 @@ export default function HomePage() {
   };
 
   const filterModels = useCallback((term: string, provider: string) => {
-    // First filter out Alibaba models
-    let filteredData = modelData.filter(model => 
-      model.developer.toLowerCase() !== 'alibaba'
-    );
+    // Start with all models
+    let filteredData = modelData;
     
     // Filter by provider if selected
     if (provider) {
@@ -424,7 +422,6 @@ export default function HomePage() {
   const getUniqueProviders = () => {
     const providers = Array.from(new Set(
       modelData
-        .filter(model => model.developer.toLowerCase() !== 'alibaba')
         .map(model => model.developer)
     )).sort();
     return providers;
@@ -790,7 +787,7 @@ export default function HomePage() {
       <main className="flex-grow mx-auto w-full max-w-[1400px] px-2 sm:px-3 lg:px-4 py-12">
         <div className="mb-12 text-center max-w-4xl mx-auto">
           <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">
-            The Holistic AI LLM Leaderboard
+            Holistic AI LLM Decision Hub
           </h1>
           <p className="text-xl text-gray-700 mb-4 font-medium">
             Helping senior leaders make confident, well-informed decisions about their LLM environment.
@@ -826,7 +823,7 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-3 rounded-lg border border-blue-200 shadow-sm">
               <span className="text-sm font-medium text-gray-700">
-                Showing <span className="font-bold text-blue-700 text-lg">{filteredModels.length}</span> of <span className="font-bold text-blue-700 text-lg">{modelData.filter(model => model.developer.toLowerCase() !== 'alibaba').length}</span> total models
+                Showing <span className="font-bold text-blue-700 text-lg">{filteredModels.length}</span> of <span className="font-bold text-blue-700 text-lg">{modelData.length}</span> total models
               </span>
             </div>
           </div>

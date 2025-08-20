@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'AI Model Comparison Tool - Compare LLMs Side by Side',
     description: 'Compare AI language models side by side. Analyze performance, pricing, safety, and capabilities of GPT-4, Claude, Gemini, DeepSeek and other LLMs.',
     url: 'https://llmleaderboard.ai/compare',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

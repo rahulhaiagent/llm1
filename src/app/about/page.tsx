@@ -26,7 +26,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800 tracking-tight">
-            The Holistic AI LLM Leaderboard
+            The Holistic AI LLM Decision Hub
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Helping senior leaders make confident, well-informed decisions about their LLM environment.

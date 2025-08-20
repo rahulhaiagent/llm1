@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Enterprise AI Cost Optimizer - Reduce LLM Costs & Find Best Models',
     description: 'Optimize your enterprise AI costs with intelligent model recommendations. Find the most cost-effective LLMs for your business needs.',
     url: 'https://llmleaderboard.ai/enterprise-cost-optimizer',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

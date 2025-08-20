@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'AI Red Teaming Results - Model Safety Testing & Vulnerabilities',
     description: 'Comprehensive AI red teaming results showing safety testing, jailbreaking resistance, and vulnerability assessments for major LLMs.',
     url: 'https://llmleaderboard.ai/red-teaming',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

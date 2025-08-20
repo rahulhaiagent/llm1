@@ -433,7 +433,7 @@ export default function RedTeamingPage() {
                               {model.name}
                             </div>
                             <div className="text-xs text-gray-500">
-                              {model.operationalRank && `#${model.operationalRank} Operational`}
+                              {model.operationalRank && `#${model.operationalRank}`}
                             </div>
                           </div>
                         </div>

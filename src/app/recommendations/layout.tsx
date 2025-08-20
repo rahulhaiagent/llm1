@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'AI Model Recommendations - Best LLMs for Your Use Case',
     description: 'Get AI model recommendations based on performance charts. Compare the safest, most affordable, best coding and math AI models.',
     url: 'https://llmleaderboard.ai/recommendations',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

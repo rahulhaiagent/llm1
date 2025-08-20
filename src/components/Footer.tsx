@@ -18,7 +18,7 @@ export default function Footer() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="font-semibold text-gray-900">LLM Leaderboard</span>
+              <span className="font-semibold text-gray-900">Holistic AI LLM Decision Hub</span>
             </div>
             <p className="text-gray-600 text-sm">
               Comprehensive assessment and benchmarking of AI language models for safety and performance.
@@ -77,7 +77,7 @@ export default function Footer() {
             Unauthorized use is strictly prohibited.
           </p>
           <p className="text-center text-sm text-gray-500 mt-4">
-            © 2025 LLM Leaderboard. All rights reserved.
+            © 2025 LLM Decision Hub. All rights reserved.
           </p>
         </div>
       </div>

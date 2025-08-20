@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Test Your LLM - AI Model Performance Testing & Evaluation',
     description: 'Test and evaluate your AI language model performance with comprehensive benchmarks. Compare your LLM against industry standards.',
     url: 'https://llmleaderboard.ai/test-your-llm',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

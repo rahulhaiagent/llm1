@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Anthropic AI Models - Claude 3.5 Sonnet, Haiku & More',
     description: 'Explore Anthropic AI models including Claude 3.5 Sonnet, Claude 3.7 Sonnet, and Claude Haiku with detailed performance benchmarks.',
     url: 'https://llmleaderboard.ai/anthropic',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',

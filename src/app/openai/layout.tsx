@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'OpenAI Models - GPT-4, GPT-4o, GPT-4o mini | Performance & Pricing',
     description: 'Explore OpenAI AI models including GPT-4, GPT-4o, GPT-4o mini with detailed performance benchmarks and pricing analysis.',
     url: 'https://llmleaderboard.ai/openai',
-    siteName: 'LLM Leaderboard',
+    siteName: 'LLM Decision Hub',
     images: [
       {
         url: '/hai-cover.png',
