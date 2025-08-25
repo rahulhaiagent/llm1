@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Info, BookOpen, FileText, Shield, Calculator } from 'lucide-react';
+import { Info, BookOpen, FileText, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -40,12 +40,12 @@ export default function Footer() {
                   <span>Holistic AI Library</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/enterprise-cost-optimizer" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
                   <Calculator className="w-4 h-4 group-hover:text-blue-600" />
                   <span>Enterprise Cost Optimizer</span>
                 </Link>
-              </li>
+              </li> */}
 
             </ul>
           </div>

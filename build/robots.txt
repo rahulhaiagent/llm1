@@ -1,6 +1,0 @@
-# robots.txt for https://llmleaderboard.ai
-User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://llmleaderboard.ai/sitemap.xml
