@@ -53,6 +53,9 @@ export default function Navigation({ className = "" }: NavigationProps) {
           </div>
           <div className="flex items-center space-x-8">
             <Link href="/" className={getLinkClasses('/')}>
+              Home
+            </Link>
+            <Link href="/leaderboard" className={getLinkClasses('/leaderboard')}>
               Leaderboard
             </Link>
             <Link href="/recommendations" className={getLinkClasses('/recommendations')}>
