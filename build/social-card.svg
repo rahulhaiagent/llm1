@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#030711"/>
+  <rect x="60" y="60" width="1080" height="510" rx="15" fill="#060d1d" stroke="#293348" stroke-width="2"/>
+  
+  <!-- Logo and Brand -->
+  <g transform="translate(100, 150)">
+    <circle cx="50" cy="50" r="50" fill="#4f46e5" opacity="0.2"/>
+    <text x="120" y="60" font-family="Arial" font-weight="bold" font-size="48" fill="#ffffff">Holistic AI</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="600" y="300" font-family="Arial" font-weight="bold" font-size="64" fill="#ffffff" text-anchor="middle">LLM Leaderboard</text>
+  <text x="600" y="380" font-family="Arial" font-size="40" fill="#94a3b8" text-anchor="middle">Performance &amp; Safety Metrics</text>
+  
+  <!-- Bottom element -->
+  <rect x="150" y="450" width="900" height="80" rx="8" fill="#0d1526"/>
+  <text x="600" y="500" font-family="Arial" font-size="30" fill="#ffffff" text-anchor="middle">Compare leading AI models: GPT-4, Claude, Gemini, Llama, and more</text>
+</svg> 

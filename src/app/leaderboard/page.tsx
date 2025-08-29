@@ -418,12 +418,16 @@ export default function LeaderboardPage() {
     setSelectedProvider(provider);
   };
 
-  // Get unique providers for filter buttons
+  // Get unique providers for filter buttons (only providers with models)
   const getUniqueProviders = () => {
-    const providers = Array.from(new Set(
-      modelData
-        .map(model => model.developer)
-    )).sort();
+    const providerCounts = modelData.reduce((acc, model) => {
+      acc[model.developer] = (acc[model.developer] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    const providers = Object.keys(providerCounts)
+      .filter(provider => providerCounts[provider] > 0)
+      .sort();
     return providers;
   };
 
@@ -436,6 +440,7 @@ export default function LeaderboardPage() {
       'Meta': '/meta.png',
       'DeepSeek': '/deepseek.png',
       'Mistral': '/Mistral.png',
+      'Alibaba': '/qwq.png',
       'xAI': '/xai.png',
       'OpenRouter': '/open-router.jpeg'
     };
@@ -794,7 +799,7 @@ export default function LeaderboardPage() {
               placeholder="Search models..."
               value={searchTerm}
               onChange={(e) => handleSearch(e.target.value)}
-              className="pl-12 pr-10 py-3 bg-white border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 w-full text-base rounded-lg shadow-sm"
+              className="pl-12 pr-10 py-3 bg-white border-2 border-gray-200 focus:border-holistic-blurple focus:ring-2 focus:ring-holistic-blurple/10 w-full text-base rounded-lg shadow-sm font-roobert"
             />
             {searchTerm && (
               <button
@@ -868,8 +873,7 @@ export default function LeaderboardPage() {
                     : 'bg-gray-200 text-gray-600'
                 }`}>
                   {modelData.filter(model => 
-                    model.developer === provider && 
-                    model.developer.toLowerCase() !== 'alibaba'
+                    model.developer === provider
                   ).length}
                 </span>
               </button>
@@ -1023,10 +1027,11 @@ export default function LeaderboardPage() {
                     {renderSortableHeaderHolisticAI('safetyPercentage', 'Safe', 'Responses')}
                     {renderSortableHeaderHolisticAI('safetyPercentage', 'Unsafe', 'Responses')}
                     {renderSortableHeaderHolisticAI('jailbreakingResistancePercentage', 'Jailbreaking', 'Resistance', 'w-[140px]')}
-                    {renderSortableHeaderPerformance('codeLMArena', 'Code', 'LMArena')}
+                    {renderSortableHeaderPerformance('codeLMArena', 'Code', 'LMArena (old)')}
                     {renderSortableHeaderPerformance('mathLiveBench', 'Math', 'LiveBench')}
                     {renderSortableHeaderPerformance('gpqa', 'GPQA')}
                     {renderSortableHeaderPerformance('codeLiveBench', 'Code', 'LiveBench')}
+                    {renderSortableHeaderPerformance('codeRankedAGI', 'Code', 'RankedAGI')}
                     {renderSortableHeaderModelInfo('multimodal', 'Multimodal', 'Support')}
                     {renderSortableHeaderModelInfo('size', 'Size', 'Parameters', 'w-[130px]')}
                     {renderSortableHeaderModelInfo('released', 'Released')}
@@ -1177,6 +1182,13 @@ export default function LeaderboardPage() {
                           </span>
                         ) : "-"}
                       </TableCell>
+                      <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100">
+                        {model.codeRankedAGI !== '-' ? (
+                          <span className={`px-1.5 py-0.5 rounded text-xs ${getScoreClassName(model.codeRankedAGI, 'benchmark')}`}>
+                            {model.codeRankedAGI}
+                          </span>
+                        ) : "-"}
+                      </TableCell>
                       
                       {/* Model Information Group */}
                       <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100">
@@ -1257,17 +1269,17 @@ export default function LeaderboardPage() {
 
         {/* Benchmark Data Sources Note */}
         <div className="mt-8 mb-4 max-w-5xl mx-auto">
-          <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg shadow-sm">
+          <div className="bg-holistic-blurple/5 border-l-4 border-holistic-blurple rounded-r-lg shadow-sm">
             <div className="flex items-start p-6">
               <div className="flex-shrink-0">
-                <Info className="h-5 w-5 text-blue-400 mt-0.5" />
+                <Info className="h-5 w-5 text-holistic-blurple mt-0.5" />
               </div>
               <div className="ml-4">
                 <div className="text-sm">
-                  <h3 className="text-blue-800 font-semibold mb-2 flex items-center">
+                  <h3 className="text-holistic-deepblue font-semibold mb-2 flex items-center font-roobert">
                     📊 Data Source
                   </h3>
-                  <p className="text-blue-700 leading-relaxed">
+                  <p className="text-holistic-deepblue leading-relaxed font-roboto-condensed">
                   All comparative insights are based on a combination of rigorous red teaming and jailbreaking testing performed by Holistic AI, as well as publicly available benchmark data. External benchmarks include <strong>CodeLMArena, MathLiveBench, CodeLiveBench, and GPQA</strong>. These were sourced from official model provider websites, public leaderboards, benchmark sites, and other accessible resources to ensure transparency, accuracy, and reliability.
                   </p>
                 </div>

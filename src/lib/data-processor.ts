@@ -67,6 +67,7 @@ export function processModelData(rawData: ModelData[]): ProcessedModelData[] {
       mathLiveBench: model.MathLiveBench,
       gpqa: model.GPQA || '-',
       codeLiveBench: model.CodeLiveBench,
+      codeRankedAGI: model.CodeRankedAGI || '-',
       inputCost: parseCost(model["Input Cost/M"]),
       outputCost: parseCost(model["Output Cost/M"]),
       cutoffKnowledge: model.CutoffKnowledge || '-',

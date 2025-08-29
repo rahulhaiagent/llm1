@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +31,12 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    
+    /* Holistic AI Brand Colors as CSS Variables */
+    --holistic-blurple: #5049f9;
+    --holistic-amethyst: #AB5FCE;
+    --holistic-cerulean: #36B1FE;
+    --holistic-deepblue: #141E41;
   }
 
   .dark {
@@ -66,6 +74,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Holistic AI Brand Color Utilities - Force include in production */
+@layer utilities {
+  .text-holistic-blurple { color: var(--holistic-blurple, #5049f9); }
+  .text-holistic-amethyst { color: var(--holistic-amethyst, #AB5FCE); }
+  .text-holistic-cerulean { color: var(--holistic-cerulean, #36B1FE); }
+  .text-holistic-deepblue { color: var(--holistic-deepblue, #141E41); }
+  
+  .bg-holistic-blurple { background-color: var(--holistic-blurple, #5049f9); }
+  .bg-holistic-amethyst { background-color: var(--holistic-amethyst, #AB5FCE); }
+  .bg-holistic-cerulean { background-color: var(--holistic-cerulean, #36B1FE); }
+  .bg-holistic-deepblue { background-color: var(--holistic-deepblue, #141E41); }
+  
+  .border-holistic-blurple { border-color: var(--holistic-blurple, #5049f9); }
+  .border-holistic-amethyst { border-color: var(--holistic-amethyst, #AB5FCE); }
+  .border-holistic-cerulean { border-color: var(--holistic-cerulean, #36B1FE); }
+  .border-holistic-deepblue { border-color: var(--holistic-deepblue, #141E41); }
 }
 
 /* Custom scrollbar styles */

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Custom Multi-step → HubSpot</title>
+  <style>
+    /* Put your Image-2 CSS here */
+    .field { margin-bottom: 16px; }
+    input, button { font-size:16px; }
+    button { background:#000; color:#fff; border:0; border-radius:5px; padding:14px 24px; }
+  </style>
+</head>
+<body>
+  <!-- Step 1 -->
+  <form id="step1">
+    <div class="field">
+      <label>Email*</label>
+      <input id="email" type="email" required placeholder="Email address">
+    </div>
+    <button type="button" id="next1">Next</button>
+  </form>
+
+  <!-- Step 2 (hidden until Next) -->
+  <form id="step2" style="display:none">
+    <div class="field">
+      <label>First name*</label>
+      <input id="firstname" required>
+    </div>
+    <div class="field">
+      <label>Last name*</label>
+      <input id="lastname" required>
+    </div>
+    <button type="button" id="submitAll">Submit</button>
+  </form>
+
+  <script>
+    // Your HubSpot IDs
+    const portalId = "25785988";
+    const formGuid = "9d7a431b-2c64-4024-9bb2-1c21c1b430b9"; // same HubSpot form you already have
+
+    // Step logic
+    document.getElementById('next1').onclick = () => {
+      const email = document.getElementById('email');
+      if (!email.reportValidity()) return;
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+    };
+
+    // Submit to HubSpot Forms API (EU)
+    document.getElementById('submitAll').onclick = async () => {
+      const email = document.getElementById('email').value.trim();
+      const firstname = document.getElementById('firstname').value.trim();
+      const lastname = document.getElementById('lastname').value.trim();
+
+      // Basic validation
+      if (!email || !firstname || !lastname) { alert('Please fill all required fields.'); return; }
+
+      // Hutk cookie (optional but helps attribution)
+      const hutk = (document.cookie.match(/hubspotutk=([^;]+)/)||[])[1] || undefined;
+
+      const payload = {
+        fields: [
+          { name: "email", value: email },
+          { name: "firstname", value: firstname },
+          { name: "lastname", value: lastname }
+        ],
+        context: {
+          hutk,
+          pageUri: window.location.href,
+          pageName: document.title
+        }
+      };
+
+      try {
+        const res = await fetch(`https://forms-eu1.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          alert("Thanks! Submitted.");
+          // show a custom success state / redirect
+        } else {
+          const txt = await res.text();
+          console.error(txt);
+          alert("Submission error. Check console.");
+        }
+      } catch (e) {
+        console.error(e);
+        alert("Network error.");
+      }
+    };
+  </script>
+</body>
+</html>

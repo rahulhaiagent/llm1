@@ -12,6 +12,7 @@ export interface ModelData {
   MathLiveBench: string;
   GPQA: string;
   CodeLiveBench: string;
+  CodeRankedAGI?: string;
   "Input Cost/M": string;
   "Output Cost/M": string;
   CutoffKnowledge: string | null;
@@ -103,6 +104,7 @@ export interface ProcessedModelData {
   mathLiveBench: string;
   gpqa: string;
   codeLiveBench: string;
+  codeRankedAGI: string;
   inputCost: number | null;
   outputCost: number | null;
   cutoffKnowledge: string;
@@ -206,6 +208,7 @@ export type SortField =
   | 'mathLiveBench' 
   | 'gpqa'
   | 'codeLiveBench'
+  | 'codeRankedAGI'
   | 'latency'
   | 'multimodal'
   | 'reasoning'; 

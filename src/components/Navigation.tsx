@@ -21,13 +21,13 @@ export default function Navigation({ className = "" }: NavigationProps) {
 
   const getLinkClasses = (path: string) => {
     if (path === '/test-your-llm') {
-      return "bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200";
+      return "bg-holistic-blurple hover:bg-holistic-deepblue text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 font-roobert";
     }
     
-    const baseClasses = "transition-colors duration-200";
+    const baseClasses = "transition-colors duration-200 font-roobert";
     return isActive(path) 
-      ? `text-gray-900 hover:text-blue-600 font-medium ${baseClasses}`
-      : `text-gray-600 hover:text-blue-600 ${baseClasses}`;
+      ? `text-holistic-deepblue hover:text-holistic-blurple font-medium ${baseClasses}`
+      : `text-gray-600 hover:text-holistic-blurple ${baseClasses}`;
   };
 
   return (
@@ -45,8 +45,8 @@ export default function Navigation({ className = "" }: NavigationProps) {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="font-semibold text-gray-900 text-lg">LLM Decision Hub</span>
-              <div className="absolute -top-1 -right-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[10px] font-bold px-1 py-0.5 rounded-full shadow-sm">
+              <span className="font-semibold text-holistic-deepblue text-lg font-roobert">LLM Decision Hub</span>
+              <div className="absolute -top-1 -right-2 bg-gradient-to-r from-holistic-blurple to-holistic-amethyst text-white text-[10px] font-bold px-1 py-0.5 rounded-full shadow-sm font-roboto-condensed">
                 BETA
               </div>
             </Link>

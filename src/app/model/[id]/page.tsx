@@ -362,7 +362,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
               <span className="text-xs font-medium">Safety Score</span>
               </div>
             <div className="text-xl font-bold text-gray-900 mb-1">
-              {model.safeResponses ? `${model.safeResponses}%` : '-'}
+              {model.safetyPercentage ? `${model.safetyPercentage}%` : '-'}
             </div>
             <div className="text-xs text-gray-500">Safe Responses</div>
           </div>
@@ -930,7 +930,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
           })()}
 
           {/* Performance Benchmarks - Only show if at least one benchmark has data */}
-          {(hasValidBenchmarkData(model.codeLMArena) || hasValidBenchmarkData(model.mathLiveBench) || hasValidBenchmarkData(model.codeLiveBench)) && (
+          {(hasValidBenchmarkData(model.codeLMArena) || hasValidBenchmarkData(model.mathLiveBench) || hasValidBenchmarkData(model.codeLiveBench) || hasValidBenchmarkData(model.codeRankedAGI)) && (
             <div id="benchmarks" className="mt-10 mb-8">
                           <div className="flex items-center space-x-2 mb-2">
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -940,7 +940,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             </div>
               <p className="text-gray-600 text-sm mb-4">Focus on quantitative capabilities of the model across reasoning, math, coding, etc.</p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {/* CodeLMArena */}
                 {hasValidBenchmarkData(model.codeLMArena) && (
                   <div className="bg-white border border-gray-100 rounded-lg p-3">
@@ -949,10 +949,10 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                         <Brain className="h-3 w-3 text-blue-600" />
                       </div>
                       <BenchmarkTooltip
-                        title="CodeLMArena"
+                        title="CodeLMArena (old)"
                         description="Competitive coding benchmark where models are evaluated on their ability to solve complex programming problems, debug code, and demonstrate logical reasoning across multiple programming languages and difficulty levels."
                       >
-                        <h3 className="text-sm font-semibold text-gray-900 cursor-help hover:text-blue-600 transition-colors">CodeLMArena</h3>
+                        <h3 className="text-sm font-semibold text-gray-900 cursor-help hover:text-blue-600 transition-colors">CodeLMArena (old)</h3>
                       </BenchmarkTooltip>
                     </div>
                     
@@ -1003,6 +1003,28 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                     <div className="mb-1">
                       <p className="text-xs text-gray-500 mb-1">Coding ability</p>
                       <div className="text-xl font-bold text-gray-900">{model.codeLiveBench}</div>
+                    </div>
+                  </div>
+                )}
+
+                {/* CodeRankedAGI */}
+                {hasValidBenchmarkData(model.codeRankedAGI) && (
+                  <div className="bg-white border border-gray-100 rounded-lg p-3">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="p-1.5 bg-cyan-50 rounded">
+                        <div className="h-3 w-3 text-cyan-600 font-bold flex items-center justify-center text-sm">🤖</div>
+                      </div>
+                      <BenchmarkTooltip
+                        title="CodeRankedAGI"
+                        description="Advanced AGI coding benchmark evaluating sophisticated programming capabilities, including complex problem-solving, architectural design, and advanced software engineering tasks requiring deep reasoning."
+                      >
+                        <h3 className="text-sm font-semibold text-gray-900 cursor-help hover:text-cyan-600 transition-colors">CodeRankedAGI</h3>
+                      </BenchmarkTooltip>
+                    </div>
+                    
+                    <div className="mb-1">
+                      <p className="text-xs text-gray-500 mb-1">AGI coding ability</p>
+                      <div className="text-xl font-bold text-gray-900">{model.codeRankedAGI}</div>
                     </div>
                   </div>
                 )}

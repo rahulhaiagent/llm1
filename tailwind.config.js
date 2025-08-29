@@ -7,6 +7,35 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
+  safelist: [
+    // Holistic AI Brand Colors - ensure they're always included in production
+    'text-holistic-blurple',
+    'text-holistic-amethyst', 
+    'text-holistic-cerulean',
+    'text-holistic-deepblue',
+    'bg-holistic-blurple',
+    'bg-holistic-amethyst',
+    'bg-holistic-cerulean', 
+    'bg-holistic-deepblue',
+    'border-holistic-blurple',
+    'border-holistic-amethyst',
+    'border-holistic-cerulean',
+    'border-holistic-deepblue',
+    'hover:bg-holistic-blurple',
+    'hover:bg-holistic-deepblue',
+    'hover:text-holistic-blurple',
+    'hover:border-holistic-blurple',
+    'focus:border-holistic-blurple',
+    'focus:ring-holistic-blurple/10',
+    'from-holistic-blurple',
+    'to-holistic-amethyst',
+    'from-holistic-cerulean/10',
+    'to-holistic-amethyst/10',
+    'bg-holistic-blurple/5',
+    // Font families
+    'font-roobert',
+    'font-roboto-condensed'
+  ],
   theme: {
     extend: {
       content: {
@@ -46,6 +75,38 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Holistic AI Brand Colors
+        'holistic': {
+          'blurple': '#5049f9',
+          'amethyst': '#AB5FCE',
+          'cerulean': '#36B1FE',
+          'deepblue': '#141E41',
+        },
+        // Updated blue palette to match brand
+        blue: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#36B1FE', // Holistic AI Cerulean
+          600: '#5049f9', // Holistic AI Blurple
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#141E41', // Holistic AI Deepblue
+        },
+        purple: {
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#AB5FCE', // Holistic AI Amethyst
+          600: '#9333ea',
+          700: '#7c3aed',
+          800: '#6b21a8',
+          900: '#581c87',
+        },
         gray: {
           25: '#fcfcfd',
           50: '#f9fafb',
@@ -66,7 +127,32 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        'roobert': [
+          'Roobert',
+          'Inter',
+          'SF Pro Display',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif'
+        ],
+        'roboto-condensed': [
+          '"Roboto Condensed"',
+          'Roboto',
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif'
+        ],
         sans: [
+          'Inter',
+          'SF Pro Display',
           '-apple-system',
           'BlinkMacSystemFont',
           '"Segoe UI"',
