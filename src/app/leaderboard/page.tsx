@@ -157,6 +157,18 @@ export default function LeaderboardPage() {
       title: "Multimodal",
       content: "Indicates whether the model can process multiple types of input (text, images, audio, video). 'Yes' means full multimodal support, 'Limited' means basic vision/image support, 'No' means text-only."
     },
+    googleVertexAvailable: {
+      title: "Available on Google Vertex AI",
+      content: "Indicates whether this model is available through Google Vertex AI platform. 'Yes' means available, 'No' means not available through this provider."
+    },
+    azureAvailable: {
+      title: "Available on Microsoft Azure",
+      content: "Indicates whether this model is available through Microsoft Azure AI platform. 'Yes' means available, 'No' means not available through this provider."
+    },
+    awsBedrockAvailable: {
+      title: "Available on AWS Bedrock",
+      content: "Indicates whether this model is available through AWS Bedrock platform. 'Yes' means available, 'No' means not available through this provider."
+    },
     safeResponses: {
       title: "Safe Responses",
       content: "Percentage of responses that are deemed safe, appropriate, and free from harmful, biased, or inappropriate content based on comprehensive safety evaluations."
@@ -390,6 +402,18 @@ export default function LeaderboardPage() {
         };
         const aScore = getReasoningScore(aValue as string);
         const bScore = getReasoningScore(bValue as string);
+        return sortConfig.direction === 'asc' ? aScore - bScore : bScore - aScore;
+      }
+
+      // Handle provider availability (Yes > No > -)
+      if (sortConfig.key && ['googleVertexAvailable', 'azureAvailable', 'awsBedrockAvailable'].includes(sortConfig.key)) {
+        const getProviderScore = (value: string) => {
+          if (value === 'Yes') return 3;
+          if (value === 'No') return 2;
+          return 1; // For '-' or other values
+        };
+        const aScore = getProviderScore(aValue as string);
+        const bScore = getProviderScore(bValue as string);
         return sortConfig.direction === 'asc' ? aScore - bScore : bScore - aScore;
       }
 
@@ -811,13 +835,7 @@ export default function LeaderboardPage() {
             )}
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-3 rounded-lg border border-blue-200 shadow-sm">
-              <span className="text-sm font-medium text-gray-700">
-                Showing <span className="font-bold text-blue-700 text-lg">{filteredModels.length}</span> of <span className="font-bold text-blue-700 text-lg">{modelData.length}</span> total models
-              </span>
-            </div>
-          </div>
+
         </div>
 
         {/* Provider Filter */}
@@ -843,7 +861,7 @@ export default function LeaderboardPage() {
                   : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
               }`}
             >
-              All Providers
+              All Providers ({modelData.length})
             </button>
             
             {/* Individual Provider Buttons */}
@@ -888,7 +906,7 @@ export default function LeaderboardPage() {
             className="text-sm text-gray-600 hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1"
           >
             <span>Issues? / Missing data?</span>
-            <span className="text-blue-600 hover:text-blue-700 font-medium underline">Connect us here</span>
+            <span className="text-blue-600 hover:text-blue-700 font-medium underline">Connect with us!</span>
           </button>
         </div>
 
@@ -987,7 +1005,7 @@ export default function LeaderboardPage() {
             </div>
           </div>
           
-          <div className="overflow-x-auto table-container" id="table-container" onScroll={handleScroll}>
+                     <div className="overflow-x-auto" id="table-container" onScroll={handleScroll} style={{ scrollBehavior: 'auto' }}>
             {/* Mobile touch scroll indicator */}
             <div className="md:hidden flex justify-center py-2 bg-gray-50 border-b border-gray-200">
               <div className="flex items-center space-x-2 text-gray-600">
@@ -1000,15 +1018,15 @@ export default function LeaderboardPage() {
                 </svg>
               </div>
             </div>
-            <div className="min-w-[2360px]">
+            <div className="min-w-[2800px]">
               <Table className="w-full border-separate border-spacing-0" key={`table-${searchTerm}-${filteredModels.length}`}>
-                <TableHeader className="bg-white sticky top-0 z-10">
+                <TableHeader className="bg-white">
                   {/* Single clean header row */}
                   <TableRow>
-                    <TableHead 
-                      className="h-14 px-6 text-left font-normal text-gray-700 bg-white sticky left-0 z-30 border-b border-r border-gray-200 cursor-pointer hover:bg-gray-50"
-                      onClick={() => handleSort('name')}
-                    >
+                                          <TableHead 
+                        className="h-14 px-6 text-left font-normal text-gray-700 bg-white border-b border-r border-gray-200 cursor-pointer hover:bg-gray-50"
+                        onClick={() => handleSort('name')}
+                      >
                       <div className="flex items-center space-x-1">
                         <span className="text-sm">Model</span>
                         <div className="flex flex-col">
@@ -1033,6 +1051,110 @@ export default function LeaderboardPage() {
                     {renderSortableHeaderPerformance('codeLiveBench', 'Code', 'LiveBench')}
                     {renderSortableHeaderPerformance('codeRankedAGI', 'Code', 'RankedAGI')}
                     {renderSortableHeaderModelInfo('multimodal', 'Multimodal', 'Support')}
+                    {/* Google Vertex AI with logo */}
+                    <TableHead 
+                      className="h-14 px-3 text-center font-normal text-gray-700 bg-white border-b border-gray-200 cursor-pointer hover:bg-gray-50 w-[140px]"
+                      onClick={() => handleSort('googleVertexAvailable')}
+                    >
+                      <div className="flex flex-col items-center justify-center space-y-1">
+                        <Tooltip
+                          title="Available on Google Vertex AI"
+                          content="Indicates whether this model is available through Google Vertex AI platform. 'Yes' means available, 'No' means not available through this provider."
+                        >
+                          <div className="flex flex-col items-center space-y-1 cursor-help">
+                            <div className="flex items-center space-x-1">
+                              <span className="text-sm">Available on</span>
+                              <Info className="w-3 h-3 text-gray-400 hover:text-gray-600" />
+                              <div className="flex flex-col">
+                                <ChevronUp 
+                                  className={`h-3 w-3 ${sortConfig.key === 'googleVertexAvailable' && sortConfig.direction === 'asc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                                <ChevronDown 
+                                  className={`h-3 w-3 -mt-1 ${sortConfig.key === 'googleVertexAvailable' && sortConfig.direction === 'desc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                              </div>
+                            </div>
+                            <Image
+                              src="/google.png"
+                              alt="Google Vertex AI"
+                              width={32}
+                              height={32}
+                              className="rounded mb-4"
+                            />
+                          </div>
+                        </Tooltip>
+                      </div>
+                    </TableHead>
+                    
+                    {/* Microsoft Azure with logo */}
+                    <TableHead 
+                      className="h-14 px-3 text-center font-normal text-gray-700 bg-white border-b border-gray-200 cursor-pointer hover:bg-gray-50 w-[140px]"
+                      onClick={() => handleSort('azureAvailable')}
+                    >
+                      <div className="flex flex-col items-center justify-center space-y-1">
+                        <Tooltip
+                          title="Available on Microsoft Azure"
+                          content="Indicates whether this model is available through Microsoft Azure AI platform. 'Yes' means available, 'No' means not available through this provider."
+                        >
+                          <div className="flex flex-col items-center space-y-1 cursor-help">
+                            <div className="flex items-center space-x-1">
+                              <span className="text-sm">Available on</span>
+                              <Info className="w-3 h-3 text-gray-400 hover:text-gray-600" />
+                              <div className="flex flex-col">
+                                <ChevronUp 
+                                  className={`h-3 w-3 ${sortConfig.key === 'azureAvailable' && sortConfig.direction === 'asc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                                <ChevronDown 
+                                  className={`h-3 w-3 -mt-1 ${sortConfig.key === 'azureAvailable' && sortConfig.direction === 'desc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                              </div>
+                            </div>
+                            <Image
+                              src="/azure.png"
+                              alt="Microsoft Azure"
+                              width={28}
+                              height={28}
+                              className="rounded mb-4"
+                            />
+                          </div>
+                        </Tooltip>
+                      </div>
+                    </TableHead>
+                    
+                    {/* AWS Bedrock with logo */}
+                    <TableHead 
+                      className="h-14 px-3 text-center font-normal text-gray-700 bg-white border-b border-gray-200 cursor-pointer hover:bg-gray-50 w-[140px]"
+                      onClick={() => handleSort('awsBedrockAvailable')}
+                    >
+                      <div className="flex flex-col items-center justify-center space-y-1">
+                        <Tooltip
+                          title="Available on AWS Bedrock"
+                          content="Indicates whether this model is available through AWS Bedrock platform. 'Yes' means available, 'No' means not available through this provider."
+                        >
+                          <div className="flex flex-col items-center space-y-1 cursor-help">
+                            <div className="flex items-center space-x-1">
+                              <span className="text-sm">Available on</span>
+                              <Info className="w-3 h-3 text-gray-400 hover:text-gray-600" />
+                              <div className="flex flex-col">
+                                <ChevronUp 
+                                  className={`h-3 w-3 ${sortConfig.key === 'awsBedrockAvailable' && sortConfig.direction === 'asc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                                <ChevronDown 
+                                  className={`h-3 w-3 -mt-1 ${sortConfig.key === 'awsBedrockAvailable' && sortConfig.direction === 'desc' ? 'text-gray-600' : 'text-gray-300'}`} 
+                                />
+                              </div>
+                            </div>
+                            <Image
+                              src="/AWS-Bedrock.png"
+                              alt="AWS Bedrock"
+                              width={28}
+                              height={28}
+                              className="rounded mb-4"
+                            />
+                          </div>
+                        </Tooltip>
+                      </div>
+                    </TableHead>
                     {renderSortableHeaderModelInfo('size', 'Size', 'Parameters', 'w-[130px]')}
                     {renderSortableHeaderModelInfo('released', 'Released')}
                     {renderSortableHeaderModelInfo('cutoffKnowledge', 'Knowledge', 'Cutoff')}
@@ -1057,7 +1179,7 @@ export default function LeaderboardPage() {
                       onMouseMove={handleRowMouseMove}
                       onMouseLeave={handleRowMouseLeave}
                     >
-                      <TableCell className="h-16 px-6 bg-white border-b border-r border-gray-200 sticky left-0 z-10">
+                                              <TableCell className="h-16 px-6 bg-white border-b border-r border-gray-200">
                         <Link 
                           href={`/model/${model.id}`} 
                           className="flex items-center space-x-3 w-full h-full group"
@@ -1222,6 +1344,91 @@ export default function LeaderboardPage() {
                           </Tooltip>
                         )}
                       </TableCell>
+                      
+                      {/* Google Vertex AI Availability */}
+                      <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100">
+                        {model.googleVertexAvailable !== '-' ? (
+                          <Tooltip
+                            title={`Available on Google Vertex AI: ${model.googleVertexAvailable}`}
+                            content={
+                              model.googleVertexAvailable === 'Yes' 
+                                ? 'This model is available through Google Vertex AI platform.'
+                                : 'This model is not available through Google Vertex AI platform.'
+                            }
+                          >
+                            <span className={`px-1.5 py-0.5 rounded text-xs cursor-help ${
+                              model.googleVertexAvailable === 'Yes' ? 'bg-emerald-50 text-emerald-700' :
+                              'bg-red-50 text-red-700'
+                            }`}>
+                              {model.googleVertexAvailable}
+                            </span>
+                          </Tooltip>
+                        ) : (
+                          <Tooltip
+                            title="Google Vertex AI Availability: Unknown"
+                            content="No availability information for Google Vertex AI."
+                          >
+                            <span className="text-gray-500 cursor-help">-</span>
+                          </Tooltip>
+                        )}
+                      </TableCell>
+                      
+                      {/* Microsoft Azure Availability */}
+                      <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100">
+                        {model.azureAvailable !== '-' ? (
+                          <Tooltip
+                            title={`Available on Microsoft Azure: ${model.azureAvailable}`}
+                            content={
+                              model.azureAvailable === 'Yes' 
+                                ? 'This model is available through Microsoft Azure AI platform.'
+                                : 'This model is not available through Microsoft Azure AI platform.'
+                            }
+                          >
+                            <span className={`px-1.5 py-0.5 rounded text-xs cursor-help ${
+                              model.azureAvailable === 'Yes' ? 'bg-emerald-50 text-emerald-700' :
+                              'bg-red-50 text-red-700'
+                            }`}>
+                              {model.azureAvailable}
+                            </span>
+                          </Tooltip>
+                        ) : (
+                          <Tooltip
+                            title="Microsoft Azure Availability: Unknown"
+                            content="No availability information for Microsoft Azure."
+                          >
+                            <span className="text-gray-500 cursor-help">-</span>
+                          </Tooltip>
+                        )}
+                      </TableCell>
+                      
+                      {/* AWS Bedrock Availability */}
+                      <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100">
+                        {model.awsBedrockAvailable !== '-' ? (
+                          <Tooltip
+                            title={`Available on AWS Bedrock: ${model.awsBedrockAvailable}`}
+                            content={
+                              model.awsBedrockAvailable === 'Yes' 
+                                ? 'This model is available through AWS Bedrock platform.'
+                                : 'This model is not available through AWS Bedrock platform.'
+                            }
+                          >
+                            <span className={`px-1.5 py-0.5 rounded text-xs cursor-help ${
+                              model.awsBedrockAvailable === 'Yes' ? 'bg-emerald-50 text-emerald-700' :
+                              'bg-red-50 text-red-700'
+                            }`}>
+                              {model.awsBedrockAvailable}
+                            </span>
+                          </Tooltip>
+                        ) : (
+                          <Tooltip
+                            title="AWS Bedrock Availability: Unknown"
+                            content="No availability information for AWS Bedrock."
+                          >
+                            <span className="text-gray-500 cursor-help">-</span>
+                          </Tooltip>
+                        )}
+                      </TableCell>
+                      
                       <TableCell className="text-center py-3 px-2 border-b border-gray-100 whitespace-nowrap border-l border-gray-100 text-xs text-gray-700">
                         {model.size.includes("Parameters") ? (
                           <div className="flex flex-col items-center">
@@ -1259,7 +1466,7 @@ export default function LeaderboardPage() {
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 mb-4">
                     <Search className="h-6 w-6 text-gray-400" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-1">No models found</h3>
+                  <h3 className="text-[1.5em] font-medium text-gray-900 mb-1">No models found</h3>
                   <p className="text-gray-500">Try adjusting your search terms</p>
                 </div>
               )}
@@ -1276,7 +1483,7 @@ export default function LeaderboardPage() {
               </div>
               <div className="ml-4">
                 <div className="text-sm">
-                  <h3 className="text-holistic-deepblue font-semibold mb-2 flex items-center font-roobert">
+                  <h3 className="text-[1.5em] text-holistic-deepblue font-semibold mb-2 flex items-center font-roobert">
                     📊 Data Source
                   </h3>
                   <p className="text-holistic-deepblue leading-relaxed font-roboto-condensed">
