@@ -11,6 +11,19 @@ A comprehensive React TypeScript component for comparing AI model providers acro
 - **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
 - **⚡ Real-time Updates**: Data reflects the latest pricing and performance information
 
+## 🛡️ Safety & Security Testing
+
+All jailbreaking and red teaming data is comprehensively tested by **Holistic AI**, ensuring:
+
+- **🔒 Jailbreaking Resistance**: Models are tested against various prompt injection and safety bypass attempts
+- **🎯 Red Team Evaluations**: Rigorous adversarial testing to identify potential vulnerabilities
+- **📊 Safety Rankings**: Comprehensive safety scores based on resistance to harmful outputs
+- **⚖️ Bias Assessment**: Evaluation of model responses for potential biases and harmful content
+- **🔍 Comprehensive Testing**: Multi-layered approach including automated and human evaluation
+- **📈 Continuous Monitoring**: Regular updates to safety assessments as models evolve
+
+*Holistic AI's expertise in AI safety and security ensures that all safety metrics are thoroughly validated and reliable for enterprise decision-making.*
+
 ## 📋 Data Coverage
 
 The dashboard includes data for major AI providers:
@@ -171,7 +184,14 @@ interface ModelData {
 
 ## 📈 Data Sources
 
-Data is aggregated from official provider documentation and regularly updated to ensure accuracy. Pricing reflects per-million-token costs, latency shows average response times, and throughput indicates maximum processing speeds.
+Data is aggregated from multiple reliable sources:
+
+- **Performance & Pricing**: Official provider documentation and APIs
+- **Safety & Security**: Comprehensive testing and evaluation by **Holistic AI**
+- **Jailbreaking Resistance**: Rigorous red team testing by Holistic AI security experts
+- **Benchmark Scores**: External benchmarks including CodeLMArena, MathLiveBench, CodeLiveBench, and GPQA
+
+All data is regularly updated to ensure accuracy. Pricing reflects per-million-token costs, latency shows average response times, throughput indicates maximum processing speeds, and safety metrics are validated through Holistic AI's comprehensive testing protocols.
 
 ## 🤝 Contributing
 
