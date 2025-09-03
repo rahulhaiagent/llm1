@@ -115,16 +115,16 @@ export default function HomePage() {
       <LLMRankings />
 
       {/* About Us Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-holistic-cerulean/5">
+      <section className="py-20 bg-gradient-to-br from-white to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             {/* Background decorative elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-holistic-blurple/10 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-holistic-amethyst/10 rounded-full blur-2xl"></div>
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-holistic-blurple/5 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-holistic-amethyst/5 rounded-full blur-2xl"></div>
             
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 overflow-hidden">
+            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               {/* Gradient border effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-holistic-blurple via-holistic-cerulean to-holistic-amethyst opacity-20 blur-sm"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-holistic-blurple via-holistic-cerulean to-holistic-amethyst opacity-5 blur-sm"></div>
               
               <div className="relative p-8 md:p-12">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -146,20 +146,23 @@ export default function HomePage() {
                       helping enterprises make informed choices grounded in evidence, not hype.
                     </p>
                     
-                    <Link
-                      href="/about"
-                      className="inline-flex items-center space-x-2 text-holistic-blurple hover:text-holistic-deepblue font-medium transition-colors duration-200 group"
-                    >
-                      <span>Want to know more?</span>
-                      <svg 
-                        className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-200" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                      <span className="text-lg text-gray-700 font-medium">Want to know more?</span>
+                      <Link
+                        href="/about"
+                        className="inline-flex items-center justify-center px-6 py-3 bg-holistic-blurple hover:bg-holistic-deepblue text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 group font-roobert"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </Link>
+                        <span>Learn About Us</span>
+                        <svg 
+                          className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                   
                   {/* Right side - Visual */}
@@ -167,7 +170,7 @@ export default function HomePage() {
                     <div className="grid grid-cols-2 gap-4">
                       {/* Feature cards */}
                       <div className="space-y-4">
-                        <div className="bg-gradient-to-br from-holistic-blurple/10 to-holistic-blurple/5 p-4 rounded-xl border border-holistic-blurple/20">
+                        <div className="bg-gradient-to-br from-holistic-blurple/5 to-holistic-blurple/3 p-4 rounded-xl border border-holistic-blurple/10">
                           <div className="w-8 h-8 bg-holistic-blurple rounded-lg flex items-center justify-center mb-3">
                             <span className="text-white text-sm">🛡️</span>
                           </div>
@@ -175,7 +178,7 @@ export default function HomePage() {
                           <p className="text-xs text-gray-600 mt-1">Red team evaluations</p>
                         </div>
                         
-                        <div className="bg-gradient-to-br from-holistic-cerulean/10 to-holistic-cerulean/5 p-4 rounded-xl border border-holistic-cerulean/20">
+                        <div className="bg-gradient-to-br from-holistic-cerulean/5 to-holistic-cerulean/3 p-4 rounded-xl border border-holistic-cerulean/10">
                           <div className="w-8 h-8 bg-holistic-cerulean rounded-lg flex items-center justify-center mb-3">
                             <span className="text-white text-sm">📊</span>
                           </div>
@@ -185,7 +188,7 @@ export default function HomePage() {
                       </div>
                       
                       <div className="space-y-4 pt-8">
-                        <div className="bg-gradient-to-br from-holistic-amethyst/10 to-holistic-amethyst/5 p-4 rounded-xl border border-holistic-amethyst/20">
+                        <div className="bg-gradient-to-br from-holistic-amethyst/5 to-holistic-amethyst/3 p-4 rounded-xl border border-holistic-amethyst/10">
                           <div className="w-8 h-8 bg-holistic-amethyst rounded-lg flex items-center justify-center mb-3">
                             <span className="text-white text-sm">⚖️</span>
                           </div>
@@ -193,7 +196,7 @@ export default function HomePage() {
                           <p className="text-xs text-gray-600 mt-1">Unbiased analysis</p>
                         </div>
                         
-                        <div className="bg-gradient-to-br from-holistic-deepblue/10 to-holistic-deepblue/5 p-4 rounded-xl border border-holistic-deepblue/20">
+                        <div className="bg-gradient-to-br from-holistic-deepblue/5 to-holistic-deepblue/3 p-4 rounded-xl border border-holistic-deepblue/10">
                           <div className="w-8 h-8 bg-holistic-deepblue rounded-lg flex items-center justify-center mb-3">
                             <span className="text-white text-sm">🎯</span>
                           </div>
