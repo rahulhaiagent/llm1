@@ -117,15 +117,15 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-end justify-center z-50 p-4 md:items-center animate-fade-in">
-      <div className="bg-white rounded-xl shadow-xl max-w-3xl w-full max-h-[90vh] overflow-auto animate-slide-in">
+    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-start justify-start z-50 p-4 animate-fade-in">
+      <div className="bg-white rounded-xl shadow-xl max-w-md w-full max-h-[80vh] overflow-auto animate-slide-in">
         {!showPreferences ? (
           // Main consent dialog
-          <div className="p-6 md:p-8">
-            <div className="flex justify-between items-center mb-6">
+          <div className="p-4">
+            <div className="flex justify-between items-center mb-4">
               <div className="flex items-center">
-                <Shield className="h-6 w-6 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-800">Cookie Consent</h2>
+                <Shield className="h-5 w-5 text-blue-600 mr-2" />
+                <h2 className="text-lg font-bold text-gray-800">Cookie Consent</h2>
               </div>
               <button 
                 onClick={() => setIsOpen(false)} 
@@ -136,37 +136,37 @@ const CookieConsent = () => {
               </button>
             </div>
             
-            <div className="prose prose-sm text-gray-600 mb-8">
-              <p className="text-base leading-relaxed">
+            <div className="text-gray-600 mb-4">
+              <p className="text-sm leading-relaxed mb-3">
                 We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
                 By clicking &quot;Accept All&quot;, you consent to our use of cookies.
               </p>
               
-              <div className="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-md">
-                <p className="font-medium text-blue-700 mb-2">
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-3 rounded-md">
+                <p className="font-medium text-blue-700 mb-2 text-sm">
                   We use the following tracking technologies:
                 </p>
-                <ul className="space-y-2 text-blue-800">
+                <ul className="space-y-1 text-blue-800 text-xs">
                   <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
+                    <span className="font-semibold mr-1">•</span>
                     <div>
                       <span className="font-semibold">Google Analytics</span> - To analyze website traffic and user behavior
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
+                    <span className="font-semibold mr-1">•</span>
                     <div>
                       <span className="font-semibold">Apollo Website Tracker</span> - For business intelligence and visitor identification
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
+                    <span className="font-semibold mr-1">•</span>
                     <div>
                       <span className="font-semibold">Google Webmasters</span> - For website performance monitoring
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
+                    <span className="font-semibold mr-1">•</span>
                     <div>
                       <span className="font-semibold">HubSpot</span> - For marketing automation and visitor tracking
                     </div>
@@ -175,34 +175,34 @@ const CookieConsent = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 justify-end">
+            <div className="flex flex-col gap-2">
+              <button 
+                onClick={handleAcceptAll}
+                className="px-4 py-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors font-medium text-sm"
+              >
+                Accept All
+              </button>
               <button 
                 onClick={handleRejectNonEssential}
-                className="px-5 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+                className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium text-sm"
               >
                 Reject Non-Essential
               </button>
               <button 
                 onClick={togglePreferencePanel}
-                className="px-5 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium"
+                className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium text-sm"
               >
                 Manage Preferences
-              </button>
-              <button 
-                onClick={handleAcceptAll}
-                className="px-5 py-2.5 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors font-medium"
-              >
-                Accept All
               </button>
             </div>
           </div>
         ) : (
           // Detailed preferences panel
-          <div className="p-6 md:p-8">
-            <div className="flex justify-between items-center mb-6">
+          <div className="p-4">
+            <div className="flex justify-between items-center mb-4">
               <div className="flex items-center">
-                <Settings className="h-6 w-6 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-800">Cookie Preferences</h2>
+                <Settings className="h-5 w-5 text-blue-600 mr-2" />
+                <h2 className="text-lg font-bold text-gray-800">Cookie Preferences</h2>
               </div>
               <button 
                 onClick={() => setShowPreferences(false)} 
@@ -213,16 +213,16 @@ const CookieConsent = () => {
               </button>
             </div>
             
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-4 text-sm">
               Customize your cookie preferences below. Necessary cookies are always enabled as they are essential for the website to function properly.
             </p>
             
-            <div className="space-y-4 mb-8">
-              <div className="p-5 border border-gray-200 rounded-lg bg-gray-50">
+            <div className="space-y-3 mb-4">
+              <div className="p-3 border border-gray-200 rounded-lg bg-gray-50">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium text-gray-900 text-lg">Necessary Cookies</h3>
-                    <p className="text-sm text-gray-600 mt-1">Essential for the website to function properly</p>
+                    <h3 className="font-medium text-gray-900 text-sm">Necessary Cookies</h3>
+                    <p className="text-xs text-gray-600 mt-1">Essential for the website to function properly</p>
                   </div>
                   <div className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
                     Required
@@ -230,11 +230,11 @@ const CookieConsent = () => {
                 </div>
               </div>
               
-              <div className="p-5 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+              <div className="p-3 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium text-gray-900 text-lg">Analytics Cookies</h3>
-                    <p className="text-sm text-gray-600 mt-1">Google Analytics to help us understand how you use the website</p>
+                    <h3 className="font-medium text-gray-900 text-sm">Analytics Cookies</h3>
+                    <p className="text-xs text-gray-600 mt-1">Google Analytics to help us understand how you use the website</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input 
@@ -250,11 +250,11 @@ const CookieConsent = () => {
                 </div>
               </div>
               
-              <div className="p-5 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+              <div className="p-3 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium text-gray-900 text-lg">Marketing Cookies</h3>
-                    <p className="text-sm text-gray-600 mt-1">HubSpot and Apollo for marketing and visitor identification</p>
+                    <h3 className="font-medium text-gray-900 text-sm">Marketing Cookies</h3>
+                    <p className="text-xs text-gray-600 mt-1">HubSpot and Apollo for marketing and visitor identification</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input 
@@ -270,11 +270,11 @@ const CookieConsent = () => {
                 </div>
               </div>
               
-              <div className="p-5 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
+              <div className="p-3 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-medium text-gray-900 text-lg">Preference Cookies</h3>
-                    <p className="text-sm text-gray-600 mt-1">Remember your settings and preferences</p>
+                    <h3 className="font-medium text-gray-900 text-sm">Preference Cookies</h3>
+                    <p className="text-xs text-gray-600 mt-1">Remember your settings and preferences</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input 
@@ -291,26 +291,26 @@ const CookieConsent = () => {
               </div>
             </div>
             
-            <div className="flex justify-end gap-3">
-              <button 
-                onClick={() => setShowPreferences(false)}
-                className="px-5 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium"
-              >
-                Cancel
-              </button>
+            <div className="flex gap-2">
               <button 
                 onClick={handleSavePreferences}
-                className="px-5 py-2.5 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors font-medium"
+                className="px-4 py-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors font-medium text-sm flex-1"
               >
                 Save Preferences
+              </button>
+              <button 
+                onClick={() => setShowPreferences(false)}
+                className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors font-medium text-sm flex-1"
+              >
+                Cancel
               </button>
             </div>
           </div>
         )}
         
-        <div className="bg-gray-50 px-6 py-4 text-xs text-gray-500 rounded-b-xl border-t border-gray-100">
+        <div className="bg-gray-50 px-4 py-3 text-xs text-gray-500 rounded-b-xl border-t border-gray-100">
           <div className="flex items-center gap-2">
-            <AlertCircle className="h-4 w-4 text-gray-400" />
+            <AlertCircle className="h-3 w-3 text-gray-400" />
             <p>
               This website is protected by DMCA. By using this site, you agree to our <a href="https://www.holisticai.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Privacy Policy</a> and <a href="https://www.holisticai.com/terms-conditions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Terms of Service</a>.
             </p>
