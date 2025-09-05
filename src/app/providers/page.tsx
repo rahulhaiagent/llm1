@@ -77,39 +77,6 @@ export default function ProvidersPage() {
               <ModelProviders />
             </div>
 
-            {/* Additional Info */}
-            <div className="mt-12 bg-white rounded-lg p-8 shadow-sm border">
-              <h2 className="text-2xl font-normal text-gray-900 mb-4">How to Use</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-normal text-gray-900 mb-3">Select a Model</h3>
-                  <p className="text-gray-600 mb-4">
-                    Choose from over 80 different AI models including GPT-4, Claude, Gemini, Llama, and more.
-                    Each model shows all available providers with their specific pricing and performance metrics.
-                  </p>
-
-                  <h3 className="text-lg font-normal text-gray-900 mb-3">Compare Providers</h3>
-                  <p className="text-gray-600">
-                    View detailed comparisons including input/output pricing per million tokens,
-                    latency in milliseconds, and throughput in tokens per second.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-normal text-gray-900 mb-3">Sort & Filter</h3>
-                  <p className="text-gray-600 mb-4">
-                    Click on any column header to sort providers by that metric.
-                    Find the most cost-effective option, fastest response times, or highest throughput.
-                  </p>
-
-                  <h3 className="text-lg font-normal text-gray-900 mb-3">Key Insights</h3>
-                  <p className="text-gray-600">
-                    The summary cards at the bottom show quick insights including total providers,
-                    lowest pricing, best latency, and highest throughput for the selected model.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </main>
