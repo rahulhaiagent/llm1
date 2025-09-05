@@ -117,7 +117,7 @@ const CookieConsent = () => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-start justify-start z-50 p-4 animate-fade-in">
+    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-end justify-start z-50 p-4 animate-fade-in">
       <div className="bg-white rounded-xl shadow-xl max-w-md w-full max-h-[80vh] overflow-auto animate-slide-in">
         {!showPreferences ? (
           // Main consent dialog
