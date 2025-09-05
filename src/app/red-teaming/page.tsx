@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Shield, AlertTriangle, CheckCircle, BarChart3 } from 'lucide-react';
+import { ArrowLeft, Shield } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import { processModelData } from '@/lib/data-processor';
 import { ModelData } from '@/types/model';
@@ -170,66 +170,9 @@ export default function RedTeamingPage() {
     return getPercentage(model.jailbreakingSafeResponses, model.jailbreakingPrompts);
   };
 
-  // Stats calculations
-  const avgSafeScore = Math.round(modelsWithSafetyData.reduce((sum, m) => sum + getSafetyPercentage(m), 0) / modelsWithSafetyData.length);
-  const avgJailbreakResistance = Math.round(modelsWithSafetyData.reduce((sum, m) => sum + getJailbreakingResistancePercentage(m), 0) / modelsWithSafetyData.length);
-  const vulnerableModels = modelsWithSafetyData.filter(m => getJailbreakingResistancePercentage(m) < 50).length;
 
   const renderDashboardView = () => (
     <div className="space-y-8">
-      {/* Key Metrics Dashboard */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <div className="flex items-center">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <BarChart3 className="h-6 w-6 text-blue-600" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Models Tested</p>
-              <p className="text-2xl font-bold text-gray-900">{modelsWithSafetyData.length}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <div className="flex items-center">
-            <div className="p-2 bg-green-100 rounded-lg">
-              <CheckCircle className="h-6 w-6 text-green-600" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Avg Safe Score</p>
-              <p className="text-2xl font-bold text-gray-900">{avgSafeScore}%</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <div className="flex items-center">
-            <div className="p-2 bg-purple-100 rounded-lg">
-              <Shield className="h-6 w-6 text-purple-600" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Jailbreak Resistance</p>
-              <p className="text-2xl font-bold text-gray-900">{avgJailbreakResistance}%</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <div className="flex items-center">
-            <div className="p-2 bg-red-100 rounded-lg">
-              <AlertTriangle className="h-6 w-6 text-red-600" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Vulnerable Models</p>
-              <p className="text-2xl font-bold text-gray-900">{vulnerableModels}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
       {/* Safety Leaderboard Table */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200">
         {hoveredModelName && (
@@ -503,15 +446,9 @@ export default function RedTeamingPage() {
 
         {/* Page Header */}
         <div className="mb-12 text-center max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Shield className="h-12 w-12 text-red-600 mr-3" />
-            <h1 className="text-4xl font-normal text-gray-900 tracking-tight leading-tight">Red Teaming Dashboard</h1>
-          </div>
-          <p className="text-xl text-gray-700 mb-4 font-medium">
-            Comprehensive safety analysis and adversarial testing results for AI models.
-          </p>
+          <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Red Teaming and Safety Testing</h1>
           <p className="text-lg text-gray-600 leading-relaxed">
-            See how each model performs against potential security threats and harmful content.
+            Adversarial testing and safety evaluations of leading LLMs.
           </p>
         </div>
 
