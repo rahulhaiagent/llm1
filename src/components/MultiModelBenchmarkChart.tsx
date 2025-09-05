@@ -402,10 +402,10 @@ export default function MultiModelBenchmarkChart({ models }: MultiModelBenchmark
             <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
               <BarChart3 className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900">Multi-Model Benchmark Comparison</h2>
+            <h2 className="text-xl font-normal text-gray-900">Compare Multiple Models by Category</h2>
           </div>
-          <p className="text-gray-600">
-            Compare up to 7 models across all leaderboard benchmarks including safety, coding, math, performance, and cost metrics
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Choose a single evaluation category — for example, safety, jailbreak resistance, or cost and compare up to seven models to see which performs best in that specific area.
           </p>
         </div>
 

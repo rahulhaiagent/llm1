@@ -323,29 +323,34 @@ const ComparePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="flex flex-col bg-slate-50">
       <Navigation />
       
-      <main className="mx-auto w-full max-w-[1400px] px-2 sm:px-3 lg:px-4 py-12">
-        {/* Back button */}
-        <div className="mb-8">
+      <main className="flex-grow mx-auto w-full max-w-[1400px] px-2 sm:px-3 lg:px-4 py-8">
+        {/* Breadcrumb */}
+        <div className="mb-6">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Leaderboard
           </Link>
         </div>
         
-        {/* Page Title */}
+        {/* Page Header */}
         <div className="mb-12 text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Interactive Model Comparison</h1>
-          <p className="text-xl text-gray-700 mb-4 font-medium">Select models to compare their performance across different evaluation categories.</p>
+          <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Model Comparison</h1>
+          <p className="text-lg text-gray-600 leading-relaxed">Compare leading LLMs across all evaluation categories — or focus on a single dimension like safety, jailbreak resistance, performance, or cost.</p>
         </div>
         
         {/* Model Selection */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
-          <div className="flex items-center space-x-3 mb-6">
-            <GitCompare className="w-6 h-6 text-blue-600" />
-            <h2 className="text-xl font-normal text-gray-900">Select Models to Compare</h2>
+          <div className="mb-6">
+            <div className="flex items-center space-x-3 mb-3">
+              <GitCompare className="w-6 h-6 text-blue-600" />
+              <h2 className="text-xl font-normal text-gray-900">Compare Two Models Side by Side</h2>
+            </div>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              See how they perform across every evaluation category, including safety, jailbreak resistance, performance, coding, mathematical reasoning, and cost.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
