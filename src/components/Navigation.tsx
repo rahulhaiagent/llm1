@@ -58,6 +58,10 @@ export default function Navigation({ className = "" }: NavigationProps) {
             <Link href="/leaderboard" className={getLinkClasses('/leaderboard')}>
               Leaderboard
             </Link>
+            
+            <Link href="/red-teaming" className={getLinkClasses('/red-teaming')}>
+              Red Teaming
+            </Link>
             <Link href="/recommendations" className={getLinkClasses('/recommendations')}>
               Recommendations
             </Link>
@@ -68,9 +72,6 @@ export default function Navigation({ className = "" }: NavigationProps) {
               Providers
             </Link>
            
-            <Link href="/red-teaming" className={getLinkClasses('/red-teaming')}>
-              Red Teaming
-            </Link>
 
             <Link href="/test-your-llm" className={getLinkClasses('/test-your-llm')}>
               Test Your LLM
