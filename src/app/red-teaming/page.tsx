@@ -503,9 +503,9 @@ export default function RedTeamingPage() {
 
         {/* Page Header */}
         <div className="mb-12 text-center max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex items-center justify-center mb-6">
             <Shield className="h-12 w-12 text-red-600 mr-3" />
-            <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Red Teaming Dashboard</h1>
+            <h1 className="text-4xl font-normal text-gray-900 tracking-tight leading-tight">Red Teaming Dashboard</h1>
           </div>
           <p className="text-xl text-gray-700 mb-4 font-medium">
             Comprehensive safety analysis and adversarial testing results for AI models.

@@ -21,8 +21,8 @@ export default function ProvidersPage() {
 
             {/* Page Header */}
             <div className="mb-12 text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight font-roobert">Provider Performance & Pricing</h1>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Provider Performance & Pricing</h1>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 See which providers support your model, how they perform, and what they cost—so you can choose the right fit for your use case.
               </p>
             </div>
