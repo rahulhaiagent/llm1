@@ -1483,10 +1483,10 @@ export default function LeaderboardPage() {
               </div>
               <div className="ml-4">
                 <div className="text-sm">
-                  <h3 className="text-[1.5em] text-holistic-deepblue font-semibold mb-2 flex items-center font-roobert">
+                  <h3 className="text-lg font-normal text-gray-900 mb-2 flex items-center">
                     📊 Data Source
                   </h3>
-                  <p className="text-holistic-deepblue leading-relaxed font-roboto-condensed">
+                  <p className="text-gray-700 leading-relaxed">
                   All comparative insights are based on a combination of rigorous red teaming and jailbreaking testing performed by Holistic AI, as well as publicly available benchmark data. External benchmarks include <strong>CodeLMArena, MathLiveBench, CodeLiveBench, and GPQA</strong>. These were sourced from official model provider websites, public leaderboards, benchmark sites, and other accessible resources to ensure transparency, accuracy, and reliability.
                   </p>
                 </div>
