@@ -1,73 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Loader2 } from 'lucide-react';
+import Script from 'next/script';
+import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 
 const TestYourLLMPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    modelName: '',
-    additionalInfo: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError('');
-
-    try {
-      // Submit to HubSpot
-      const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/142247677/18a89213-f3ee-4252-a7cd-f252ab3caa98', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fields: [
-            { name: 'firstname', value: formData.firstName },
-            { name: 'lastname', value: formData.lastName },
-            { name: 'email', value: formData.email },
-            { name: 'model_name', value: formData.modelName },
-            { name: 'additional_information', value: formData.additionalInfo }
-          ],
-          context: {
-            pageUri: window.location.href,
-            pageName: 'Test Your LLM'
-          }
-        })
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitError('There was an error submitting the form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
-    <div className="flex flex-col bg-slate-50 min-h-screen">
-      <Navigation />
+    <>
+      <Script 
+        src="https://js-eu1.hsforms.net/forms/embed/25785988.js" 
+        strategy="lazyOnload"
+      />
+      <div className="flex flex-col bg-slate-50 min-h-screen">
+        <Navigation />
 
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -169,7 +116,7 @@ const TestYourLLMPage: React.FC = () => {
               </div> */}
             </div>
 
-            {/* Right Column - Custom Form */}
+            {/* Right Column - HubSpot Form */}
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
               <div className="mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">Request for Red Teaming Audit</h2>
@@ -178,129 +125,8 @@ const TestYourLLMPage: React.FC = () => {
                 </p>
               </div>
 
-              {/* Success Message */}
-              {isSubmitted && (
-                <div className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <div>
-                      <h3 className="text-green-800 font-semibold">Thank you for your interest!</h3>
-                      <p className="text-green-700 text-sm">We&apos;ll get back to you as soon as possible.</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Error Message */}
-              {submitError && (
-                <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
-                  <p className="text-red-700 text-sm">{submitError}</p>
-                </div>
-              )}
-
-              {/* Custom Form */}
-              {!isSubmitted && (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* First Name and Last Name */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      required
-                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                        placeholder="Enter your first name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                        className="w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                        placeholder="Enter your last name"
-                    />
-                  </div>
-                </div>
-
-                  {/* Email */}
-                <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                      placeholder="your.email@company.com"
-                  />
-                </div>
-
-                  {/* Model Name */}
-                <div>
-                    <label htmlFor="modelName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Model Name
-                  </label>
-                    <input
-                      type="text"
-                      id="modelName"
-                      name="modelName"
-                      value={formData.modelName}
-                    onChange={handleInputChange}
-                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                      placeholder="e.g., GPT-4, Claude-3, Custom Model"
-                    />
-                </div>
-
-                  {/* Additional Information */}
-                <div>
-                    <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-2">
-                    Additional Information
-                  </label>
-                  <textarea
-                      id="additionalInfo"
-                      name="additionalInfo"
-                      value={formData.additionalInfo}
-                      onChange={handleInputChange}
-                    rows={4}
-                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-vertical"
-                      placeholder="Tell us about your specific testing requirements, use cases, or any other relevant information..."
-                  />
-                </div>
-
-                  {/* Submit Button */}
-                <button
-                  type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg disabled:shadow-none transform hover:-translate-y-0.5 disabled:transform-none transition-all duration-200 flex items-center justify-center space-x-2"
-                >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Submitting...</span>
-                      </>
-                    ) : (
-                  <span>Submit Request</span>
-                    )}
-                </button>
-                </form>
-              )}
+              {/* HubSpot Form Container */}
+              <div className="hs-form-frame" data-region="eu1" data-form-id="c1d78116-0b0c-476a-a577-38ae6495ef37" data-portal-id="25785988"></div>
 
               <p className="text-xs text-gray-500 text-center mt-4 px-2">
                 We&apos;d love to hear from you! Please fill out the form and we&apos;ll get back to you as soon as possible.
@@ -309,8 +135,9 @@ const TestYourLLMPage: React.FC = () => {
           </div>
         </div>
       </main>
-    </div>
+      </div>
+    </>
   );
 };
 
-export default TestYourLLMPage; 
+export default TestYourLLMPage;

@@ -121,6 +121,30 @@
       "throughput": 115,
       "latency": 5.2,
       "updated_at": "2024-12-18"
+    },
+    {
+      "model_id": "gpt-5-2025-08-07",
+      "price_per_input_token": 0.00125,
+      "price_per_output_token": 0.01,
+      "throughput": 50,
+      "latency": 20.0,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-oss-20b",
+      "price_per_input_token": 0.0,
+      "price_per_output_token": 0.0,
+      "throughput": 100,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-oss-120b",
+      "price_per_input_token": 0.0,
+      "price_per_output_token": 0.0,
+      "throughput": 80,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
     }
   ]
 }

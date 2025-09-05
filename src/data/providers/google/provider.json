@@ -185,6 +185,30 @@
       "throughput": 42,
       "latency": 0.4,
       "updated_at": "2025-05-22"
+    },
+    {
+      "model_id": "gemini-2.5-pro-preview-0605",
+      "price_per_input_token": 0.000001,
+      "price_per_output_token": 0.000005,
+      "throughput": 100,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gemini-2.5-flash-preview-0520",
+      "price_per_input_token": 0.0000005,
+      "price_per_output_token": 0.0000025,
+      "throughput": 120,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gemini-2.0-flash-exp-1206",
+      "price_per_input_token": 0.0000005,
+      "price_per_output_token": 0.0000025,
+      "throughput": 120,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
     }
   ]
 }

@@ -8,8 +8,16 @@
       "price_per_cached_input_token": 0.00000075,
       "price_per_output_token": 0.000015,
       "throughput": 32000,
-      "latency": "N/A",
-      "updated_at": "2025-01-12"
+      "latency": 11.0,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "grok-3",
+      "price_per_input_token": 0.000002,
+      "price_per_output_token": 0.00001,
+      "throughput": 28000,
+      "latency": 8.0,
+      "updated_at": "2025-01-27"
     }
   ]
 }

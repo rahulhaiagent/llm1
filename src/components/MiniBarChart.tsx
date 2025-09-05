@@ -27,7 +27,7 @@ export default function MiniBarChart({ title, subtitle, icon, iconColor, data }:
           {icon}
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-holistic-deepblue font-roobert">
+          <h3 className="text-[1.5em] font-semibold text-holistic-deepblue font-roobert">
             {title}
           </h3>
           <p className="text-sm text-gray-500 font-roboto-condensed">

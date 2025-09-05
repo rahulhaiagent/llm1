@@ -3,6 +3,7 @@ node_modules
 # Next.js build artifacts
 .next/
 out/
+build/
 
 # Development files
 *.log

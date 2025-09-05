@@ -220,7 +220,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
               )}
               <div>
               <div className="flex items-center space-x-2 mb-1">
-                <h1 className="text-2xl font-bold text-gray-900">{model.name}</h1>
+                <h1 className="text-[2.5em] font-bold text-gray-900">{model.name}</h1>
                 {/* Rank Indicators and Compare Button */}
                 <div className="flex items-center space-x-1.5">
                   {model.safetyRank && (
@@ -389,7 +389,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <h2 className="text-lg font-bold text-gray-900">Model Information</h2>
+              <h2 className="text-[2em] font-bold text-gray-900">Model Information</h2>
             </div>
             <p className="text-gray-600 text-sm">Detailed specifications and technical details</p>
           </div>
@@ -399,7 +399,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             <div className="bg-white border border-gray-100 rounded-lg p-4 hover:shadow-sm transition-shadow duration-200">
               <div className="flex items-center mb-4">
                 <Calendar className="w-4 h-4 text-gray-400 mr-2" />
-                <h3 className="text-sm font-semibold text-gray-900">Release Details</h3>
+                <h3 className="text-[1.5em] font-semibold text-gray-900">Release Details</h3>
               </div>
               <div className="space-y-3">
                 <div>
@@ -836,7 +836,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                               </svg>
                             </div>
-                            <h5 className="text-xl font-semibold text-gray-900 mb-4">Text</h5>
+                            <h5 className="text-[1.5em] font-semibold text-gray-900 mb-4">Text</h5>
                             <div className="w-full space-y-3">
                               <div className="flex items-center justify-between">
                                 <span className="text-sm font-medium text-gray-600">Input:</span>
@@ -868,7 +868,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                               </svg>
                             </div>
-                            <h5 className="text-xl font-semibold text-gray-900 mb-4">Image</h5>
+                            <h5 className="text-[1.5em] font-semibold text-gray-900 mb-4">Image</h5>
                             <div className="w-full space-y-3">
                               <div className="flex items-center justify-between">
                                 <span className="text-sm font-medium text-gray-600">Input:</span>
@@ -900,7 +900,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 14.142M5 15V9a2 2 0 012-2h3.586a1 1 0 01.707.293l2.828 2.828a1 1 0 01.293.707V15a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
                               </svg>
                             </div>
-                            <h5 className="text-xl font-semibold text-gray-900 mb-4">Audio</h5>
+                            <h5 className="text-[1.5em] font-semibold text-gray-900 mb-4">Audio</h5>
                             <div className="w-full space-y-3">
                               <div className="flex items-center justify-between">
                                 <span className="text-sm font-medium text-gray-600">Input:</span>
@@ -1201,7 +1201,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
             </svg>
-            <h2 className="text-2xl font-bold text-gray-900">Cost Calculator</h2>
+            <h2 className="text-[2em] font-bold text-gray-900">Cost Calculator</h2>
           </div>
               <p className="text-gray-600 text-sm mb-4">Interactive cost calculator and token pricing</p>
           
@@ -1232,7 +1232,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0h3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
-            <h2 className="text-2xl font-bold text-gray-900">Providers</h2>
+            <h2 className="text-[2em] font-bold text-gray-900">Providers</h2>
           </div>
               <p className="text-gray-600 text-sm mb-4">Compare pricing and features across different AI providers</p>
           
@@ -1245,7 +1245,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
             </svg>
-            <h2 className="text-2xl font-bold text-gray-900">Business Decision Guide</h2>
+            <h2 className="text-[2em] font-bold text-gray-900">Business Decision Guide</h2>
           </div>
               <p className="text-gray-600 text-sm mb-4">Key factors to consider when adopting this model for enterprise use</p>
           
@@ -1260,7 +1260,7 @@ export default function ModelDetailPage({ params }: ModelDetailPageProps) {
             <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
             </svg>
-            <h2 className="text-2xl font-bold text-gray-900">Business Use Cases</h2>
+            <h2 className="text-[2em] font-bold text-gray-900">Business Use Cases</h2>
           </div>
               <p className="text-gray-600 text-sm mb-4">Optimize your workflows with tailored AI solutions</p>
           

@@ -21,12 +21,9 @@ export default function ProvidersPage() {
 
             {/* Page Header */}
             <div className="mb-12 text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">AI Model Provider Comparison</h1>
-              <p className="text-xl text-gray-700 mb-4 font-medium">
-                The provider (e.g., AWS, Azure, Google Cloud) through which you purchase and deploy your LLM directly impacts both performance and cost.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Latency, throughput, and pricing can vary significantly, and not all models are available on every platform. Use this feature to see which providers support the models you need and compare their performance and pricing to optimize the model–provider fit.
+              <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight font-roobert">Provider Performance & Pricing</h1>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                See which providers support your model, how they perform, and what they cost—so you can choose the right fit for your use case.
               </p>
             </div>
 

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Import custom fonts - using Inter as base since it's already imported */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -92,6 +95,21 @@
   .border-holistic-amethyst { border-color: var(--holistic-amethyst, #AB5FCE); }
   .border-holistic-cerulean { border-color: var(--holistic-cerulean, #36B1FE); }
   .border-holistic-deepblue { border-color: var(--holistic-deepblue, #141E41); }
+
+  /* Gradient utilities for underlines */
+  .from-holistic-cerulean { --tw-gradient-from: var(--holistic-cerulean, #36B1FE) var(--tw-gradient-from-position); --tw-gradient-to: rgb(54 177 254 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+  .to-holistic-blurple { --tw-gradient-to: var(--holistic-blurple, #5049f9) var(--tw-gradient-to-position); }
+  .from-holistic-amethyst { --tw-gradient-from: var(--holistic-amethyst, #AB5FCE) var(--tw-gradient-from-position); --tw-gradient-to: rgb(171 95 206 / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+
+  /* Font utilities - force inclusion */
+  .font-roobert { 
+    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .font-roboto-condensed { 
+    font-family: 'Roboto Condensed', 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; 
+  }
 }
 
 /* Custom scrollbar styles */

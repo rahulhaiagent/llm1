@@ -1,10 +1,39 @@
 import { ModelData, ProcessedModelData } from '@/types/model';
 import { generateSlug, parseRank, parseCost, getDeveloperLogo } from './utils';
+import modelsByProvider from '@/data/models-by-provider.json';
 
 function parseNumericField(value: string): number | string {
   if (value === '-' || value === 'N/A' || !value) return '-';
   const numericValue = parseFloat(value);
   return isNaN(numericValue) ? value : numericValue;
+}
+
+function checkProviderAvailability(modelId: string, providerName: string): string {
+  if (!modelId || !modelsByProvider) return '-';
+  
+  const modelData = modelsByProvider[modelId as keyof typeof modelsByProvider];
+  if (!modelData || !modelData.providers) return '-';
+  
+  // Check for exact match or partial matches for provider names
+  const providers = Object.keys(modelData.providers);
+  const hasProvider = providers.some(provider => {
+    const lowerProvider = provider.toLowerCase();
+    const lowerTarget = providerName.toLowerCase();
+    
+    // Check for exact matches or common variations
+    if (lowerProvider === lowerTarget) return true;
+    if (lowerProvider.includes(lowerTarget)) return true;
+    if (lowerTarget.includes(lowerProvider)) return true;
+    
+    // Specific provider matching rules
+    if (providerName === 'Google Vertex' && (lowerProvider.includes('google') || lowerProvider.includes('vertex'))) return true;
+    if (providerName === 'Microsoft Azure' && (lowerProvider.includes('azure') || lowerProvider.includes('microsoft'))) return true;
+    if (providerName === 'AWS Bedrock' && (lowerProvider.includes('bedrock') || lowerProvider.includes('aws'))) return true;
+    
+    return false;
+  });
+  
+  return hasProvider ? 'Yes' : 'No';
 }
 
 export function processModelData(rawData: ModelData[]): ProcessedModelData[] {
@@ -102,6 +131,9 @@ export function processModelData(rawData: ModelData[]): ProcessedModelData[] {
       multimodal: model.Multimodal || '-',
       reasoning: model.Reasoning || '-',
       providerModelIds: model.ProviderModelIds || [],
+      googleVertexAvailable: checkProviderAvailability(model.ModelId, 'Google Vertex'),
+      azureAvailable: checkProviderAvailability(model.ModelId, 'Microsoft Azure'),
+      awsBedrockAvailable: checkProviderAvailability(model.ModelId, 'AWS Bedrock'),
       modalities: model.Modalities || undefined,
       features: model.Features || undefined,
       tools: model.Tools || undefined,

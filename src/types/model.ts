@@ -137,6 +137,9 @@ export interface ProcessedModelData {
   multimodal: string;
   reasoning: string;
   providerModelIds?: string[];
+  googleVertexAvailable: string;
+  azureAvailable: string;
+  awsBedrockAvailable: string;
   modalities?: {
     text?: {
       input?: boolean;
@@ -211,7 +214,10 @@ export type SortField =
   | 'codeRankedAGI'
   | 'latency'
   | 'multimodal'
-  | 'reasoning'; 
+  | 'reasoning'
+  | 'googleVertexAvailable'
+  | 'azureAvailable' 
+  | 'awsBedrockAvailable'; 
 
 // HubSpot types
 declare global {

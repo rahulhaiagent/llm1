@@ -559,5 +559,327 @@
         "updated_at": "2025-01-27"
       }
     }
+  },
+  "deepseek-r1": {
+    "modelName": "DeepSeek R1",
+    "modelId": "deepseek-r1",
+    "organization": "DeepSeek",
+    "providers": {
+      "DeepSeek": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 9,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 12,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 10,
+        "latency": 0.5,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.5-pro-preview-0605": {
+    "modelName": "Gemini 2.5 Pro Preview",
+    "modelId": "gemini-2.5-pro-preview-0605",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.5-pro-preview-0605",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000005,
+        "throughput": 100,
+        "latency": 0.5,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$1.00",
+        "output_cost_per_million": "$5.00",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.5-pro-preview-0605",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000005,
+        "throughput": 95,
+        "latency": 0.6,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$1.00",
+        "output_cost_per_million": "$5.00",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.5-flash-preview-0520": {
+    "modelName": "Gemini 2.5 Flash Preview 05-20",
+    "modelId": "gemini-2.5-flash-preview-0520",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.5-flash-preview-0520",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 120,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.5-flash-preview-0520",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 115,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.0-flash-exp-1206": {
+    "modelName": "Gemini 2.0 Flash",
+    "modelId": "gemini-2.0-flash-exp-1206",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.0-flash-exp-1206",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 120,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.0-flash-exp-1206",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 115,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemma-2-9b": {
+    "modelName": "Gemma 2 9B",
+    "modelId": "gemma-2-9b",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemma-2-9b",
+        "price_per_input_token": 0.00000005,
+        "price_per_output_token": 0.00000005,
+        "throughput": 200,
+        "latency": 0.2,
+        "context": "8K",
+        "max_output_tokens": "2K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.05",
+        "updated_at": "2025-01-27"
+      },
+      "Groq": {
+        "model_id": "gemma-2-9b",
+        "price_per_input_token": 0.00000002,
+        "price_per_output_token": 0.00000002,
+        "throughput": 500,
+        "latency": 0.1,
+        "context": "8K",
+        "max_output_tokens": "2K",
+        "input_cost_per_million": "$0.02",
+        "output_cost_per_million": "$0.02",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "grok-3": {
+    "modelName": "Grok-3",
+    "modelId": "grok-3",
+    "organization": "xAI",
+    "providers": {
+      "xAI": {
+        "model_id": "grok-3",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.00001,
+        "throughput": 28000,
+        "latency": 8.0,
+        "context": "128K",
+        "max_output_tokens": "4K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$10.00",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "grok-3",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.00001,
+        "throughput": 25000,
+        "latency": 9.0,
+        "context": "128K",
+        "max_output_tokens": "4K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$10.00",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-4-maverick-128e": {
+    "modelName": "Llama 4 Maverick 128e Instruct",
+    "modelId": "llama-4-maverick-128e",
+    "organization": "Meta",
+    "providers": {
+      "Together": {
+        "model_id": "llama-4-maverick-128e",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000005,
+        "throughput": 100,
+        "latency": 0.3,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "llama-4-maverick-128e",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000005,
+        "throughput": 120,
+        "latency": 0.25,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-3.1-instant": {
+    "modelName": "Llama 3.1 Instant",
+    "modelId": "llama-3.1-instant",
+    "organization": "Meta",
+    "providers": {
+      "Groq": {
+        "model_id": "llama-3.1-instant",
+        "price_per_input_token": 0.00000005,
+        "price_per_output_token": 0.00000005,
+        "throughput": 1000,
+        "latency": 0.1,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.05",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "llama-3.1-instant",
+        "price_per_input_token": 0.00000008,
+        "price_per_output_token": 0.00000008,
+        "throughput": 200,
+        "latency": 0.2,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.08",
+        "output_cost_per_million": "$0.08",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-4-scout-16e": {
+    "modelName": "Llama 4 Scout 16e Instruct",
+    "modelId": "llama-4-scout-16e",
+    "organization": "Meta",
+    "providers": {
+      "Together": {
+        "model_id": "llama-4-scout-16e",
+        "price_per_input_token": 0.0000003,
+        "price_per_output_token": 0.0000003,
+        "throughput": 150,
+        "latency": 0.25,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.30",
+        "output_cost_per_million": "$0.30",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "llama-4-scout-16e",
+        "price_per_input_token": 0.0000003,
+        "price_per_output_token": 0.0000003,
+        "throughput": 180,
+        "latency": 0.2,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.30",
+        "output_cost_per_million": "$0.30",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "qwen-qwq-32b": {
+    "modelName": "QWen-qwq-32b",
+    "modelId": "qwen-qwq-32b",
+    "organization": "Alibaba",
+    "providers": {
+      "Together": {
+        "model_id": "qwen-qwq-32b",
+        "price_per_input_token": 0.0000008,
+        "price_per_output_token": 0.0000008,
+        "throughput": 80,
+        "latency": 0.4,
+        "context": "32K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.80",
+        "output_cost_per_million": "$0.80",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "qwen-qwq-32b",
+        "price_per_input_token": 0.0000008,
+        "price_per_output_token": 0.0000008,
+        "throughput": 75,
+        "latency": 0.5,
+        "context": "32K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.80",
+        "output_cost_per_million": "$0.80",
+        "updated_at": "2025-01-27"
+      }
+    }
   }
 }

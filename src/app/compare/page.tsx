@@ -187,7 +187,7 @@ const ComparePage: React.FC = () => {
       return (
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
           <BarChart3 className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-normal text-gray-900 mb-2">No Benchmark Data Available</h3>
+                      <h3 className="text-[1.5em] font-normal text-gray-900 mb-2">No Benchmark Data Available</h3>
           <p className="text-gray-500">No comparable benchmark data is available for these models.</p>
         </div>
       );
@@ -206,7 +206,7 @@ const ComparePage: React.FC = () => {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center space-x-3">
             <BarChart3 className="w-6 h-6 text-blue-600" />
-            <h3 className="text-xl font-normal text-gray-900">Benchmark Comparison</h3>
+            <h3 className="text-[1.5em] font-normal text-gray-900">Benchmark Comparison</h3>
           </div>
           <div className="flex items-center space-x-6 text-sm">
             <div className="flex items-center space-x-2">
@@ -414,18 +414,17 @@ const ComparePage: React.FC = () => {
         
         {/* Comparison Content */}
         {model1 && model2 ? (
-          <div className="space-y-8">
-            {/* Radar Chart Comparison */}
-            <div className="mb-8">
-              <h2 className="text-xl font-normal text-gray-900 mb-6">Performance Radar Comparison</h2>
-              <ComparisonRadarChart selectedModels={selectedModels} />
-            </div>
-
-            {/* Bar Chart Comparison */}
-            <ComparisonChart model1={model1} model2={model2} />
-            
-            {/* Detailed Metrics Comparison */}
+          <div className="space-y-12">
+            {/* Section 1: Compare the Models */}
             <div className="space-y-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-normal text-gray-900 mb-4 font-roobert">Compare the Models</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Side-by-side comparison of model specifications, features, and detailed information
+                </p>
+                <div className="w-20 h-0.5 bg-gradient-to-r from-holistic-cerulean to-holistic-blurple rounded-full mx-auto mt-4"></div>
+              </div>
+
               {/* Model Headers */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -494,8 +493,30 @@ const ComparePage: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Performance Metrics */}
+            {/* Section 2: Compare the Benchmarks */}
+            <div className="space-y-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-normal text-gray-900 mb-4 font-roobert">Compare the Benchmarks</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Performance metrics, safety scores, and technical benchmark comparisons
+                </p>
+                <div className="w-20 h-0.5 bg-gradient-to-r from-holistic-amethyst to-holistic-blurple rounded-full mx-auto mt-4"></div>
+              </div>
+
+              {/* Radar Chart Comparison */}
+              <div className="mb-8">
+                <h3 className="text-xl font-normal text-gray-900 mb-6">Performance Radar Comparison</h3>
+                <ComparisonRadarChart selectedModels={selectedModels} />
+              </div>
+
+              {/* Bar Chart Comparison */}
+              <ComparisonChart model1={model1} model2={model2} />
+              
+              {/* Detailed Metrics Comparison */}
+              <div className="space-y-8">
+                {/* Performance Metrics */}
               <div className="bg-white rounded-lg shadow-sm border border-gray-200">
                 <div className="px-6 py-4 border-b border-gray-200">
                   <div className="flex items-center space-x-3">
@@ -663,15 +684,10 @@ const ComparePage: React.FC = () => {
                   />
                 </div>
               </div>
+              </div>
             </div>
           </div>
-        ) : (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12 text-center">
-            <GitCompare className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-normal text-gray-900 mb-2">Select Two Models to Compare</h3>
-            <p className="text-gray-500 max-w-lg mx-auto">Choose two AI models from the dropdown menus above to see a detailed comparison of their capabilities and performance.</p>
-          </div>
-        )}
+        ) : null}
 
         {/* Multi-Model Benchmark Comparison Section */}
         <div className="mt-12">

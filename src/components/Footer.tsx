@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Info, BookOpen, FileText, Shield } from 'lucide-react';
+import { Info, BookOpen, FileText, Shield, Mail, Users } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -29,24 +29,29 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
-                  <Info className="w-4 h-4 group-hover:text-blue-600" />
-                  <span>About</span>
-                </Link>
-              </li>
-              <li>
                 <Link href="/holistic-ai-library" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
                   <BookOpen className="w-4 h-4 group-hover:text-blue-600" />
                   <span>Holistic AI Library</span>
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/enterprise-cost-optimizer" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
-                  <Calculator className="w-4 h-4 group-hover:text-blue-600" />
-                  <span>Enterprise Cost Optimizer</span>
-                </Link>
-              </li> */}
+            </ul>
+          </div>
 
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Company</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/about" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
+                  <Info className="w-4 h-4 group-hover:text-blue-600" />
+                  <span>About Us</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 text-sm transition-colors duration-200 group">
+                  <Mail className="w-4 h-4 group-hover:text-blue-600" />
+                  <span>Contact</span>
+                </Link>
+              </li>
             </ul>
           </div>
           
