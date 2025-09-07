@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import LLMRankings from '../components/LLMRankings';
+import AnimatedBenchmarkGraph from '../components/AnimatedBenchmarkGraph';
 
 export default function HomePage() {
   return (
@@ -66,46 +67,9 @@ export default function HomePage() {
               </div> */}
             </div>
 
-            {/* Right Side - Visual */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-holistic-cerulean/10 to-holistic-amethyst/10 rounded-2xl p-8 shadow-xl">
-                {/* Mock Dashboard Preview */}
-                <div className="bg-white rounded-lg shadow-sm p-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-[1.5em] font-semibold text-holistic-deepblue font-roobert">Most Secure Models</h3>
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          </div>
-          
-                  {/* Mock ranking items */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm font-bold font-roboto-condensed">1</div>
-                        <span className="font-medium text-holistic-deepblue font-roobert">Claude 3.7 Sonnet</span>
-              </div>
-                      <span className="text-green-600 font-bold font-roboto-condensed">99.7%</span>
-            </div>
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gray-400 rounded-lg flex items-center justify-center text-white text-sm font-bold font-roboto-condensed">2</div>
-                        <span className="font-medium text-holistic-deepblue font-roobert">GPT-4.5</span>
-                      </div>
-                      <span className="text-gray-600 font-bold font-roboto-condensed">99.6%</span>
-                            </div>
-                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gray-400 rounded-lg flex items-center justify-center text-white text-sm font-bold font-roboto-condensed">3</div>
-                        <span className="font-medium text-holistic-deepblue font-roobert">Claude Opus 4.1</span>
-                            </div>
-                      <span className="text-gray-600 font-bold font-roboto-condensed">98.7%</span>
-                          </div>
-          </div>
-        </div>
-
-                {/* Floating elements for visual interest */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-holistic-blurple rounded-full opacity-20 animate-bounce"></div>
-                <div className="absolute -bottom-2 -left-2 w-12 h-12 bg-holistic-amethyst rounded-full opacity-20 animate-pulse"></div>
-              </div>
+            {/* Right Side - Animated Benchmark Graph */}
+            <div className="relative h-96">
+              <AnimatedBenchmarkGraph />
             </div>
           </div>
         </div>
