@@ -56,10 +56,10 @@ export default function LLMRankings() {
                     ...prev,
                     [`${chartIndex}-${itemIndex}`]: item.value
                   }));
-                }, itemIndex * 200);
+                }, 0);
               });
             });
-          }, 500);
+          }, 0);
         }
       },
       { threshold: 0.1 }
@@ -118,21 +118,21 @@ export default function LLMRankings() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header with Complex Animation */}
-        <div className={`text-center mb-16 mt-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center mb-16 mt-8 transition-all duration-0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-[2em] font-normal text-holistic-deepblue mb-6 font-roobert relative pb-3 group">
             {/* <span className={`inline-block transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>LLM</span> */}
-            <span className={`inline-block transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>LLM Rankings</span>
-            <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-holistic-cerulean to-holistic-blurple rounded-full transition-all duration-1000 delay-600 ${isVisible ? 'w-20 opacity-100' : 'w-0 opacity-0'}`}></div>
+            <span className={`inline-block transition-all duration-0 delay-0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>LLM Rankings</span>
+            <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-gradient-to-r from-holistic-cerulean to-holistic-blurple rounded-full transition-all duration-0 delay-0 ${isVisible ? 'w-20 opacity-100' : 'w-0 opacity-0'}`}></div>
             
             {/* Animated sparkles */}
-            <div className={`absolute -top-2 left-1/2 transform -translate-x-1/2 transition-all duration-500 delay-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}>
+            <div className={`absolute -top-2 left-1/2 transform -translate-x-1/2 transition-all duration-0 delay-0 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}>
               <div className="relative">
                 <div className="absolute animate-ping w-2 h-2 bg-holistic-blurple rounded-full"></div>
                 <div className="w-2 h-2 bg-holistic-blurple rounded-full"></div>
               </div>
             </div>
           </h2>
-          <p className={`text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-800 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-lg text-gray-600 max-w-2xl mx-auto transition-all duration-0 delay-0 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             Best models and API providers in each category
           </p>
         </div>
@@ -142,13 +142,13 @@ export default function LLMRankings() {
           {chartData.map((chart, index) => (
             <div
               key={index}
-              className={`transform transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl group ${
+              className={`transform transition-all duration-0 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl group ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-12'
               }`}
               style={{ 
-                transitionDelay: `${1000 + index * 200}ms`,
+                transitionDelay: `0ms`,
                 transformOrigin: 'center bottom'
               }}
             >
