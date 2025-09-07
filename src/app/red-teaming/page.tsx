@@ -13,8 +13,8 @@ const rawModelData = rawModelDataJson as ModelData[];
 const modelData = processModelData(rawModelData);
 
 export default function RedTeamingPage() {
-  const [sortBy, setSortBy] = useState<'safetyPercentage' | 'jailbreakingResistancePercentage' | 'safetyRank' | 'name'>('safetyPercentage');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [sortBy, setSortBy] = useState<'safetyPercentage' | 'jailbreakingResistancePercentage' | 'safetyRank' | 'name'>('safetyRank');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrollStep, setScrollStep] = useState(0);
   const [hoveredModelName, setHoveredModelName] = useState<string | null>(null);

@@ -505,10 +505,10 @@
   {
     "Model": "Claude 3.7 Sonnet",
     "ModelId": "claude-3-7-sonnet-20250219",
-    "Description": "Claude 3.7 Sonnet sets the gold standard for AI safety with #2 safety ranking, achieving 98.7% safe responses and excellent jailbreaking resistance. With enhanced 70B parameters and superior mathematical reasoning (63.3% MathLiveBench), it's the ideal choice for enterprise applications requiring maximum safety and reliability.",
-    "Meta-description": "Claude 3.7 Sonnet by Anthropic - #2 safest AI model with 98.7% safe responses and excellent security. 70B parameters with excellent math skills (63.3%). Enterprise-grade safety and performance.",
+    "Description": "Claude 3.7 Sonnet sets the gold standard for AI safety with #1 safety ranking, achieving 99.7% safe responses and excellent jailbreaking resistance. With enhanced 70B parameters and superior mathematical reasoning (63.3% MathLiveBench), it's the ideal choice for enterprise applications requiring maximum safety and reliability.",
+    "Meta-description": "Claude 3.7 Sonnet by Anthropic - #1 safest AI model with 99.7% safe responses and excellent security. 70B parameters with excellent math skills (63.3%). Enterprise-grade safety and performance.",
     "OperationalRank": "#16",
-    "SafetyRank": "#2",
+    "SafetyRank": "#1",
     "Org.": "Anthropic",
     "Size": "70B Parameters",
     "Released": "24-Feb-25",

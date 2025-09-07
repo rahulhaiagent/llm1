@@ -4,6 +4,9 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/SEO/StructuredData'
 
+import dynamic from 'next/dynamic'
+
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false })
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -131,6 +134,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
+        <CookieConsent />
       </body>
     </html>
   )
