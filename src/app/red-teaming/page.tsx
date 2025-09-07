@@ -375,9 +375,6 @@ export default function RedTeamingPage() {
                             <div className="text-sm font-normal text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                               {model.name}
                             </div>
-                            <div className="text-xs text-gray-500">
-                              {model.operationalRank && `#${model.operationalRank}`}
-                            </div>
                           </div>
                         </div>
                       </Link>
