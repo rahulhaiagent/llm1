@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Info, BookOpen, FileText, Shield, Mail, Users } from 'lucide-react';
+import { Info, BookOpen, FileText, Shield, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (

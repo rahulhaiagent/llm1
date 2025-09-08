@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
-import { Mail, Phone, MapPin, Clock, ArrowLeft } from 'lucide-react';
+import { Mail, Clock, ArrowLeft } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 
 export default function ContactPage() {
@@ -38,7 +38,7 @@ export default function ContactPage() {
               </h1>
               <div className="w-24 h-1 bg-gradient-to-r from-holistic-blurple to-holistic-cerulean rounded-full mx-auto"></div>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                Have questions about our LLM rankings or want to test your model? We'd love to hear from you.
+                Have questions about our LLM rankings or want to test your model? We&apos;d love to hear from you.
               </p>
             </div>
           </div>
@@ -50,10 +50,10 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h2 className="text-[2em] font-bold text-holistic-deepblue font-roobert">
-                  Let's Talk About Your LLM Needs
+                  Let&apos;s Talk About Your LLM Needs
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Whether you're looking to understand our evaluation methodology, want to submit your model for testing, 
+                  Whether you&apos;re looking to understand our evaluation methodology, want to submit your model for testing, 
                   or need guidance on selecting the right LLM for your enterprise, our team is here to help.
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
             <div className="bg-gray-50/50 rounded-2xl p-8 border border-gray-200">
               <div className="mb-6">
                 <h3 className="text-xl font-semibold text-holistic-deepblue font-roobert mb-2">Send us a Message</h3>
-                <p className="text-gray-600">Fill out the form below and we'll get back to you soon.</p>
+                <p className="text-gray-600">Fill out the form below and we&apos;ll get back to you soon.</p>
               </div>
               
               {/* HubSpot Form Container */}

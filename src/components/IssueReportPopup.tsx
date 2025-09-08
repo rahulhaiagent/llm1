@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Script from 'next/script';
 import { X } from 'lucide-react';
 
@@ -10,13 +10,6 @@ interface IssueReportPopupProps {
 }
 
 export default function IssueReportPopup({ isOpen, onClose }: IssueReportPopupProps) {
-  const [formLoaded, setFormLoaded] = useState(false);
-
-  useEffect(() => {
-    if (isOpen) {
-      setFormLoaded(true);
-    }
-  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -40,7 +33,7 @@ export default function IssueReportPopup({ isOpen, onClose }: IssueReportPopupPr
             <div>
               <h2 className="text-xl font-semibold text-gray-900">Get in Touch</h2>
               <p className="text-gray-600 text-sm mt-1">
-                Have questions about our rankings, want to report an issue, or submit your model for testing? We'd love to hear from you.
+                Have questions about our rankings, want to report an issue, or submit your model for testing? We&apos;d love to hear from you.
               </p>
             </div>
             <button
