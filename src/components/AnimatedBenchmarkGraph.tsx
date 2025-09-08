@@ -100,7 +100,7 @@ const AnimatedBenchmarkGraph = () => {
         setAnimatedScores(baseScores);
         
         // Phase 2: After a brief delay, randomly set 1-3 dimensions to 100%
-        setTimeout(() => {
+      setTimeout(() => {
           const targetScores: {[key: string]: number} = {};
           
           // Randomly decide how many dimensions get 100% (1, 2, or 3)
@@ -138,7 +138,8 @@ const AnimatedBenchmarkGraph = () => {
     animationCycle();
 
     return () => clearTimeout(timer);
-  }, [radarData.dimensions]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // radarData.dimensions is stable within component lifecycle
 
   // Helper functions for radar chart
   const polarToCartesian = (angle: number, radius: number) => {
@@ -178,7 +179,7 @@ const AnimatedBenchmarkGraph = () => {
         </svg>
       </div>
 
-       {/* Main Graph Container */}
+      {/* Main Graph Container */}
        <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/50 h-full flex items-center justify-center">
         {/* Animated Background Waves */}
         <div className="absolute inset-0 overflow-hidden rounded-2xl">
