@@ -46,9 +46,6 @@ export default function Navigation({ className = "" }: NavigationProps) {
                 />
               </div>
               <span className="font-semibold text-holistic-deepblue text-lg font-roobert">LLM Decision Hub</span>
-              <div className="absolute -top-1 -right-2 bg-gradient-to-r from-holistic-blurple to-holistic-amethyst text-white text-[10px] font-bold px-1 py-0.5 rounded-full shadow-sm font-roboto-condensed">
-                BETA
-              </div>
             </Link>
           </div>
           <div className="flex items-center space-x-8">
