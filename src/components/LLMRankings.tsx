@@ -167,7 +167,7 @@ export default function LLMRankings() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 relative z-10 group-hover:text-holistic-deepblue transition-colors duration-300 font-roobert">
                   {chart.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-4 relative z-10 font-roboto-condensed">
+                <p className="text-sm text-gray-600 mb-4 relative z-10">
                   {chart.subtitle}
                 </p>
                 
@@ -208,7 +208,7 @@ export default function LLMRankings() {
                           </div>
                           <span className={`font-bold text-sm transition-all duration-300 ${
                             item.rank === 1 ? 'text-green-600' : 'text-gray-600'
-                          } group-hover/item:scale-110 font-roboto-condensed`}>
+                          } group-hover/item:scale-110`}>
                             {chart.title.includes('Context') ? item.score : `${Math.round(animatedScore)}${chart.title.includes('Context') ? '' : '%'}`}
                           </span>
                         </div>
