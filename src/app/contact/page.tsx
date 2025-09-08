@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Mail, MessageSquare } from 'lucide-react';
+import { ArrowLeft, Mail } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 
 export default function ContactPage() {
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <div>
                   <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Contact Us</h1>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    If you want to contact us for any inquiry or any issue, just fill the form and we'll get back to you as soon as possible.
+                    If you want to contact us for any inquiry or any issue, just fill the form and we&apos;ll get back to you as soon as possible.
                   </p>
                 </div>
 
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 <div className="mb-6">
                   <h2 className="text-xl font-normal text-gray-900 mb-2">Send us a Message</h2>
                   <p className="text-gray-600 text-s">
-                    Fill out the form below and we'll get back to you soon.
+                    Fill out the form below and we&apos;ll get back to you soon.
                   </p>
                 </div>
 
