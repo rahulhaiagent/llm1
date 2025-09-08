@@ -1,18 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
-import Script from 'next/script';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 
 const TestYourLLMPage: React.FC = () => {
+  useEffect(() => {
+    // Load HubSpot script only on client side
+    const script = document.createElement('script');
+    script.src = 'https://js-eu1.hsforms.net/forms/embed/developer/25785988.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://js-eu1.hsforms.net/forms/embed/developer/25785988.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <>
-      <Script 
-        src="https://js-eu1.hsforms.net/forms/embed/25785988.js" 
-        strategy="lazyOnload"
-      />
       <div className="flex flex-col bg-slate-50 min-h-screen">
         <Navigation />
 
@@ -30,14 +42,14 @@ const TestYourLLMPage: React.FC = () => {
             {/* Left Column - Content */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Test Your Enterprise LLM</h1>
+                <h1 className="text-4xl font-normal mb-6 text-gray-900 tracking-tight leading-tight">Test Your Enterprise LLM</h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
                 Comprehensive assessment and benchmarking of your AI language models for safety, performance, and compliance in the Holistic AI Lab.</p>
               </div>
 
               {/* Why Test Your Enterprise LLM Section */}
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Why Test Your LLM?</h2>
+                <h2 className="text-2xl font-normal text-gray-900 mb-4">Why Test Your LLM?</h2>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -118,19 +130,19 @@ const TestYourLLMPage: React.FC = () => {
 
             {/* Right Column - HubSpot Form */}
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-2">Request for Red Teaming Audit</h2>
                 <p className="text-gray-600 text-s">
                 Use this form to request a red teaming assessment of your AI model.
                 </p>
-              </div>
+              </div> */}
 
               {/* HubSpot Form Container */}
-              <div className="hs-form-frame" data-region="eu1" data-form-id="c1d78116-0b0c-476a-a577-38ae6495ef37" data-portal-id="25785988"></div>
+              <div className="hs-form-html" data-region="eu1" data-form-id="c1d78116-0b0c-476a-a577-38ae6495ef37" data-portal-id="25785988"></div>
 
-              <p className="text-xs text-gray-500 text-center mt-4 px-2">
+              {/* <p className="text-xs text-gray-500 text-center mt-4 px-2">
                 We&apos;d love to hear from you! Please fill out the form and we&apos;ll get back to you as soon as possible.
-                </p>
+                </p> */}
             </div>
           </div>
         </div>

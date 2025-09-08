@@ -48,6 +48,21 @@
         "input_cost_per_million": "$2.00",
         "output_cost_per_million": "$8.00",
         "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-2025-04-14",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.000008,
+        "throughput": 2500,
+        "latency": 0.6,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$8.00",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
       }
     }
   },
@@ -72,6 +87,21 @@
         "throughput": "N/A",
         "latency": "Fast",
         "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-mini-2025-04-14",
+        "price_per_input_token": 4e-7,
+        "price_per_output_token": 0.0000016,
+        "throughput": 3000,
+        "latency": 0.3,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.40",
+        "output_cost_per_million": "$1.60",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
       }
     }
   },
@@ -96,6 +126,21 @@
         "throughput": 95,
         "latency": 0.3,
         "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-nano-2025-04-14",
+        "price_per_input_token": 1e-7,
+        "price_per_output_token": 4e-7,
+        "throughput": 3500,
+        "latency": 0.2,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.40",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
       }
     }
   },
@@ -126,6 +171,20 @@
         "throughput": 15000,
         "latency": 1,
         "updated_at": "2025-08-07"
+      },
+      "Azure": {
+        "model_id": "gpt-5-2025-08-07",
+        "price_per_input_token": 0.00125,
+        "price_per_output_token": 0.01,
+        "throughput": 12000,
+        "latency": 1.2,
+        "context": "400K",
+        "input_context": "272K",
+        "output_context": "128K",
+        "max_output_tokens": "128K",
+        "input_cost_per_million": "$1250.00",
+        "output_cost_per_million": "$10000.00",
+        "updated_at": "2025-01-27"
       }
     }
   },
@@ -329,6 +388,19 @@
         "output_cost_per_million_batch": "$0.15",
         "region": "US West (Oregon)",
         "updated_at": "2025-01-27"
+      },
+      "Azure": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00000007,
+        "price_per_output_token": 0.0000003,
+        "throughput": 4500,
+        "latency": 0.9,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.07",
+        "output_cost_per_million": "$0.30",
+        "deployment_type": "Preview",
+        "updated_at": "2025-01-27"
       }
     }
   },
@@ -509,16 +581,29 @@
         "output_cost_per_million_batch": "$0.30",
         "region": "US West (Oregon)",
         "updated_at": "2025-01-27"
+      },
+      "Azure": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00000015,
+        "price_per_output_token": 0.0000006,
+        "throughput": 2800,
+        "latency": 1.4,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "deployment_type": "Preview",
+        "updated_at": "2025-01-27"
       }
     }
   },
-  "claude-3-7-sonnet": {
+  "claude-3-7-sonnet-20250219": {
     "modelName": "Claude 3.7 Sonnet",
-    "modelId": "claude-3-7-sonnet",
+    "modelId": "claude-3-7-sonnet-20250219",
     "organization": "Anthropic",
     "providers": {
       "AWS Bedrock": {
-        "model_id": "claude-3-7-sonnet",
+        "model_id": "claude-3-7-sonnet-20250219",
         "price_per_input_token": 0.000003,
         "price_per_output_token": 0.000015,
         "price_per_input_token_cache_write": 0.00000375,
@@ -533,16 +618,32 @@
         "input_cost_per_million_cache_read": "$0.30",
         "region": "US East (Ohio)",
         "updated_at": "2025-01-27"
+      },
+      "Google Vertex": {
+        "model_id": "claude-3-7-sonnet-20250219",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 2800,
+        "latency": 1.1,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
+        "updated_at": "2025-01-27"
       }
     }
   },
-  "claude-4-sonnet": {
+  "claude-sonnet-4-20250514": {
     "modelName": "Claude 4 Sonnet",
-    "modelId": "claude-4-sonnet",
+    "modelId": "claude-sonnet-4-20250514",
     "organization": "Anthropic",
     "providers": {
       "AWS Bedrock": {
-        "model_id": "claude-4-sonnet",
+        "model_id": "claude-sonnet-4-20250514",
         "price_per_input_token": 0.000003,
         "price_per_output_token": 0.000015,
         "price_per_input_token_cache_write": 0.00000375,
@@ -556,6 +657,22 @@
         "input_cost_per_million_cache_write": "$3.75",
         "input_cost_per_million_cache_read": "$0.30",
         "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      },
+      "Google Vertex": {
+        "model_id": "claude-sonnet-4-20250514",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 3200,
+        "latency": 1.0,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
         "updated_at": "2025-01-27"
       }
     }

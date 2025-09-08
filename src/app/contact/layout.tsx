@@ -1,12 +1,9 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - LLM Decision Hub',
-  description: 'Get in touch with the Holistic AI team. Submit your LLM for testing, ask about our evaluation methodology, or get guidance on selecting the right model for your enterprise.',
-  openGraph: {
-    title: 'Contact Us - LLM Decision Hub',
-    description: 'Get in touch with the Holistic AI team. Submit your LLM for testing, ask about our evaluation methodology, or get guidance on selecting the right model for your enterprise.',
-  },
+  title: 'Contact Us | LLM Decision Hub',
+  description: 'Get in touch with us for any inquiries about LLM evaluation, testing, or enterprise guidance. We\'re here to help with your AI needs.',
+  keywords: 'contact, LLM evaluation, AI testing, enterprise AI, support',
 };
 
 export default function ContactLayout({
