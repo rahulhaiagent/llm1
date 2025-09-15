@@ -899,6 +899,13 @@ export default function LeaderboardPage() {
           </div>
         </div>
 
+        {/* Last Updated Note */}
+        <div className="mb-2 flex justify-end">
+          <span className="text-sm text-gray-600">
+            Last updated on: 14 Sep. 2025
+          </span>
+        </div>
+
         {/* Issue Report Note */}
         <div className="mb-4 flex justify-end">
           <button
