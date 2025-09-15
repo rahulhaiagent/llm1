@@ -65,6 +65,9 @@ export default function Navigation({ className = "" }: NavigationProps) {
             <Link href="/compare" className={getLinkClasses('/compare')}>
               Compare
             </Link>
+            <Link href="/playground" className={getLinkClasses('/playground')}>
+              Playground
+            </Link>
             <Link href="/providers" className={getLinkClasses('/providers')}>
               Providers
             </Link>
