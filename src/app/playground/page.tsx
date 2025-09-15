@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Navigation from '../../components/Navigation';
+import ApiKeyManager from '../../components/ApiKeyManager';
 
 export default function PlaygroundPage() {
   return (
@@ -19,9 +20,14 @@ export default function PlaygroundPage() {
           </p>
         </div>
 
-        {/* Main Content Area - Will be developed in next phases */}
+        {/* API Key Management Section */}
+        <div className="mb-8">
+          <ApiKeyManager />
+        </div>
+
+        {/* Coming Soon - Chat Interface */}
         <div className="bg-white rounded-xl border border-gray-200 shadow-lg p-6">
-          <div className="text-center py-16">
+          <div className="text-center py-12">
             <div className="mb-6">
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-holistic-blurple to-holistic-cerulean rounded-2xl flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,23 +35,23 @@ export default function PlaygroundPage() {
                 </svg>
               </div>
               <h3 className="text-xl font-normal text-gray-900 mb-2">
-                Multi-Model AI Testing
+                Multi-Model Chat Interface
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed max-w-md mx-auto">
-                Compare responses from multiple AI models in real-time. Add your API keys to get started.
+                Once you&apos;ve added your API keys above, you&apos;ll be able to test and compare responses from multiple AI models in real-time.
               </p>
             </div>
             
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left max-w-2xl mx-auto">
-              <h4 className="text-sm font-medium text-blue-900 mb-2">🚧 Coming Soon</h4>
+              <h4 className="text-sm font-medium text-blue-900 mb-2">🚧 Next Phase: Chat Interface</h4>
               <p className="text-sm text-blue-700 leading-relaxed">
-                The playground is currently under development. This feature will allow you to:
+                Coming next in the playground development:
               </p>
               <ul className="text-sm text-blue-700 mt-2 space-y-1 ml-4">
-                <li>• Test multiple AI models simultaneously</li>
-                <li>• Compare real-time responses side-by-side</li>
-                <li>• Use your own API keys for secure testing</li>
-                <li>• Support for ChatGPT, Claude, Gemini, and more</li>
+                <li>• Multi-column chat interface</li>
+                <li>• Real-time streaming responses</li>
+                <li>• Side-by-side model comparison</li>
+                <li>• Response metrics and analysis</li>
               </ul>
             </div>
           </div>
