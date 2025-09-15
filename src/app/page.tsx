@@ -23,7 +23,7 @@ export default function HomePage() {
                   <span className="block text-holistic-blurple">LLM Decision Hub</span>
           </h1>
                 <p className="text-xl text-gray-700 font-medium leading-relaxed">
-            Helping senior leaders make confident, well-informed decisions about their LLM environment.
+                Helping leaders make confident, well-informed decisions with clear benchmarks across different LLMs.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed">
                   Trusted, independent rankings of large language models across performance, red teaming, jailbreaking safety, and real-world usability.
