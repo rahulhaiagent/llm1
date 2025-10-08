@@ -1,0 +1,42 @@
+warning: in the working copy of 'src/lib/supabase.ts', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/lib/supabase.ts b/src/lib/supabase.ts[m
+[1mindex 8f1df74..ab751fd 100644[m
+[1m--- a/src/lib/supabase.ts[m
+[1m+++ b/src/lib/supabase.ts[m
+[36m@@ -4,12 +4,14 @@[m [mimport { createClient } from '@supabase/supabase-js'[m
+ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL[m
+ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY[m
+ [m
+[31m-// Debug logging[m
+[31m-console.log('Supabase initialization:', {[m
+[31m-  url: supabaseUrl ? 'Set' : 'Not set',[m
+[31m-  key: supabaseAnonKey ? 'Set' : 'Not set',[m
+[31m-  exportMode: process.env.NEXT_PUBLIC_EXPORT_MODE[m
+[31m-})[m
+[32m+[m[32m// Debug logging (only in development)[m
+[32m+[m[32mif (process.env.NODE_ENV === 'development') {[m
+[32m+[m[32m  console.log('Supabase initialization:', {[m
+[32m+[m[32m    url: supabaseUrl ? 'Set' : 'Not set',[m
+[32m+[m[32m    key: supabaseAnonKey ? 'Set' : 'Not set',[m
+[32m+[m[32m    exportMode: process.env.NEXT_PUBLIC_EXPORT_MODE[m
+[32m+[m[32m  })[m
+[32m+[m[32m}[m
+ [m
+ let supabaseClient = null[m
+ [m
+[36m@@ -22,9 +24,13 @@[m [mtry {[m
+         detectSessionInUrl: true[m
+       }[m
+     })[m
+[31m-    console.log('Supabase client created successfully')[m
+[32m+[m[32m    if (process.env.NODE_ENV === 'development') {[m
+[32m+[m[32m      console.log('Supabase client created successfully')[m
+[32m+[m[32m    }[m
+   } else {[m
+[31m-    console.warn('Supabase URL or anonymous key not provided. Authentication will not work.')[m
+[32m+[m[32m    if (process.env.NODE_ENV === 'development') {[m
+[32m+[m[32m      console.warn('Supabase URL or anonymous key not provided. Authentication will not work.')[m
+[32m+[m[32m    }[m
+   }[m
+ } catch (error) {[m
+   console.error('Failed to initialize Supabase client:', error)[m

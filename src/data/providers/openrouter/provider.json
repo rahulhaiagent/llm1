@@ -1,0 +1,110 @@
+{
+  "name": "OpenRouter",
+  "website": "https://openrouter.ai",
+  "providermodels": [
+    {
+      "model_id": "grok-4-0709",
+      "price_per_input_token": 0.000003,
+      "price_per_output_token": 0.000015,
+      "throughput": 32000,
+      "latency": 11.0,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-4.1-2025-04-14",
+      "price_per_input_token": 0.000002,
+      "price_per_output_token": 0.000008,
+      "throughput": 100,
+      "latency": 0.4,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-4.1-mini-2025-04-14",
+      "price_per_input_token": 0.0000004,
+      "price_per_output_token": 0.0000016,
+      "throughput": 150,
+      "latency": 0.43,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-4.5-preview-2025-02-27",
+      "price_per_input_token": 0.000075,
+      "price_per_output_token": 0.00015,
+      "throughput": 50,
+      "latency": 20.0,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-5-2025-08-07",
+      "price_per_input_token": 0.00125,
+      "price_per_output_token": 0.01,
+      "throughput": 50,
+      "latency": 20.0,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "claude-opus-4-1-20250805",
+      "price_per_input_token": 0.000015,
+      "price_per_output_token": 0.000075,
+      "throughput": 100,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "claude-3-7-sonnet-20250219",
+      "price_per_input_token": 0.000003,
+      "price_per_output_token": 0.000015,
+      "throughput": 42,
+      "latency": 0.4,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "claude-sonnet-4-20250514",
+      "price_per_input_token": 0.000003,
+      "price_per_output_token": 0.000015,
+      "throughput": 42,
+      "latency": 0.4,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "deepseek-r1",
+      "price_per_input_token": 0.00000055,
+      "price_per_output_token": 0.00000219,
+      "throughput": 9,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-4o-2024-11-20",
+      "price_per_input_token": 0.0000025,
+      "price_per_output_token": 0.00001,
+      "throughput": 132,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gemini-2.5-pro-preview-0605",
+      "price_per_input_token": 0.000001,
+      "price_per_output_token": 0.000005,
+      "throughput": 100,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gemini-2.5-flash-preview-0520",
+      "price_per_input_token": 0.0000005,
+      "price_per_output_token": 0.0000025,
+      "throughput": 120,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gemini-2.0-flash-exp-1206",
+      "price_per_input_token": 0.0000005,
+      "price_per_output_token": 0.0000025,
+      "throughput": 120,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    }
+  ]
+}

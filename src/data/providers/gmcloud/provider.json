@@ -1,0 +1,14 @@
+{
+  "name": "GMCloud",
+  "website": "https://gmcloud.ai",
+  "providermodels": [
+    {
+      "model_id": "qwen/qwen3-next-80b-a3b-instruct",
+      "price_per_input_token": 0.00000015,
+      "price_per_output_token": 0.0000015,
+      "throughput": 195.7,
+      "latency": 0.67,
+      "updated_at": "2025-01-17"
+    }
+  ]
+}

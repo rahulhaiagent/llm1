@@ -1,0 +1,1133 @@
+{
+  "grok-4-0709": {
+    "modelName": "Grok 4",
+    "modelId": "grok-4-0709",
+    "organization": "xAI",
+    "providers": {
+      "xAI": {
+        "model_id": "grok-4-0709",
+        "price_per_input_token": 0.000003,
+        "price_per_cached_input_token": 7.5e-7,
+        "price_per_output_token": 0.000015,
+        "throughput": 32000,
+        "latency": "~11s",
+        "context": "250K",
+        "max_output_tokens": "250K",
+        "input_cost_per_million": "$3",
+        "output_cost_per_million": "$15",
+        "updated_at": "2025-01-12"
+      }
+    }
+  },
+  "gpt-4.1-2025-04-14": {
+    "modelName": "GPT-4.1",
+    "modelId": "gpt-4.1-2025-04-14",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4.1-2025-04-14",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.000008,
+        "throughput": 100,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$8.00",
+        "updated_at": "2025-04-14"
+      },
+      "Azure": {
+        "model_id": "gpt-4.1-2025-04-14",
+        "price_per_input_token": 0.000002,
+        "price_per_cached_input_token": 5e-7,
+        "price_per_output_token": 0.000008,
+        "throughput": 95,
+        "latency": 0.5,
+        "context": "1M",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$8.00",
+        "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-2025-04-14",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.000008,
+        "throughput": 2500,
+        "latency": 0.6,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$8.00",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gpt-4.1-mini-2025-04-14": {
+    "modelName": "GPT-4.1-mini",
+    "modelId": "gpt-4.1-mini-2025-04-14",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4.1-mini-2025-04-14",
+        "price_per_input_token": 4e-7,
+        "price_per_output_token": 0.0000016,
+        "throughput": "N/A",
+        "latency": "Fast",
+        "updated_at": "2025-04-14"
+      },
+      "Azure": {
+        "model_id": "gpt-4.1-mini-2025-04-14",
+        "price_per_input_token": 4e-7,
+        "price_per_cached_input_token": 1e-7,
+        "price_per_output_token": 0.0000016,
+        "throughput": "N/A",
+        "latency": "Fast",
+        "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-mini-2025-04-14",
+        "price_per_input_token": 4e-7,
+        "price_per_output_token": 0.0000016,
+        "throughput": 3000,
+        "latency": 0.3,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.40",
+        "output_cost_per_million": "$1.60",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gpt-4.1-nano-2025-04-14": {
+    "modelName": "GPT-4.1-nano",
+    "modelId": "gpt-4.1-nano-2025-04-14",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4.1-nano-2025-04-14",
+        "price_per_input_token": 1e-7,
+        "price_per_output_token": 4e-7,
+        "throughput": 100,
+        "latency": 0.2,
+        "updated_at": "2025-04-14"
+      },
+      "Azure": {
+        "model_id": "gpt-4.1-nano-2025-04-14",
+        "price_per_input_token": 1e-7,
+        "price_per_cached_input_token": 2.5e-8,
+        "price_per_output_token": 4e-7,
+        "throughput": 95,
+        "latency": 0.3,
+        "updated_at": "2025-04-14"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-4.1-nano-2025-04-14",
+        "price_per_input_token": 1e-7,
+        "price_per_output_token": 4e-7,
+        "throughput": 3500,
+        "latency": 0.2,
+        "context": "1M",
+        "context_managed": "128K",
+        "context_batch": "300K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.40",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gpt-4.5-preview-2025-02-27": {
+    "modelName": "GPT-4.5",
+    "modelId": "gpt-4.5-preview-2025-02-27",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4.5-preview-2025-02-27",
+        "price_per_input_token": 0.000075,
+        "price_per_output_token": 0.00015,
+        "throughput": 100,
+        "latency": 0.5,
+        "updated_at": "2025-02-27"
+      }
+    }
+  },
+  "gpt-5-2025-08-07": {
+    "modelName": "GPT-5",
+    "modelId": "gpt-5-2025-08-07",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-5-2025-08-07",
+        "price_per_input_token": 0.00125,
+        "price_per_output_token": 0.01,
+        "throughput": 15000,
+        "latency": 1,
+        "updated_at": "2025-08-07"
+      },
+      "Azure": {
+        "model_id": "gpt-5-2025-08-07",
+        "price_per_input_token": 0.00125,
+        "price_per_output_token": 0.01,
+        "throughput": 12000,
+        "latency": 1.2,
+        "context": "400K",
+        "input_context": "272K",
+        "output_context": "128K",
+        "max_output_tokens": "128K",
+        "input_cost_per_million": "$1250.00",
+        "output_cost_per_million": "$10000.00",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "claude-opus-4-1-20250805": {
+    "modelName": "Claude Opus 4.1",
+    "modelId": "claude-opus-4-1-20250805",
+    "organization": "Anthropic",
+    "providers": {
+      "Anthropic": {
+        "model_id": "claude-opus-4-1-20250805",
+        "price_per_input_token": 0.000015,
+        "price_per_output_token": 0.000075,
+        "throughput": 46.13,
+        "latency": 2.69,
+        "updated_at": "2025-08-05"
+      },
+      "Google Vertex (Global)": {
+        "model_id": "claude-opus-4-1-20250805",
+        "price_per_input_token": 0.000015,
+        "price_per_output_token": 0.000075,
+        "throughput": 39.28,
+        "latency": 2.47,
+        "updated_at": "2025-08-05"
+      },
+      "Google Vertex": {
+        "model_id": "claude-opus-4-1-20250805",
+        "price_per_input_token": 0.000015,
+        "price_per_output_token": 0.000075,
+        "throughput": 41.02,
+        "latency": 3.24,
+        "updated_at": "2025-08-05"
+      },
+      "AWS Bedrock": {
+        "model_id": "claude-opus-4-1-20250805",
+        "price_per_input_token": 0.000015,
+        "price_per_output_token": 0.000075,
+        "price_per_input_token_cache_write": 0.00001875,
+        "price_per_input_token_cache_read": 0.0000015,
+        "throughput": 2500,
+        "latency": 1.5,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$15.00",
+        "output_cost_per_million": "$75.00",
+        "input_cost_per_million_cache_write": "$18.75",
+        "input_cost_per_million_cache_read": "$1.50",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gpt-4o-2024-11-20": {
+    "modelName": "GPT-4o",
+    "modelId": "gpt-4o-2024-11-20",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4o-2024-11-20",
+        "price_per_input_token": 0.0000025,
+        "price_per_output_token": 0.00001,
+        "throughput": 132,
+        "latency": 0.6,
+        "updated_at": "2024-11-20"
+      },
+      "Azure": {
+        "model_id": "gpt-4o-2024-11-20",
+        "price_per_input_token": 0.0000025,
+        "price_per_cached_input_token": 0.00000125,
+        "price_per_output_token": 0.00001,
+        "throughput": 99,
+        "latency": 0.53,
+        "updated_at": "2024-11-20"
+      }
+    }
+  },
+  "gpt-4o-mini-2024-07-18": {
+    "modelName": "GPT-4o-mini",
+    "modelId": "gpt-4o-mini-2024-07-18",
+    "organization": "OpenAI",
+    "providers": {
+      "OpenAI": {
+        "model_id": "gpt-4o-mini-2024-07-18",
+        "price_per_input_token": 1.5e-7,
+        "price_per_output_token": 6e-7,
+        "throughput": 132,
+        "latency": 0.5,
+        "updated_at": "2024-07-18"
+      },
+      "Azure": {
+        "model_id": "gpt-4o-mini-2024-07-18",
+        "price_per_input_token": 1.65e-7,
+        "price_per_output_token": 6.6e-7,
+        "throughput": 99,
+        "latency": 0.53,
+        "updated_at": "2024-07-18"
+      }
+    }
+  },
+  "gpt-oss-20b": {
+    "modelName": "GPT-OSS-20B",
+    "modelId": "gpt-oss-20b",
+    "organization": "OpenAI",
+    "providers": {
+      "DeepInfra": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00004,
+        "price_per_output_token": 0.00016,
+        "throughput": 127.9,
+        "latency": 0.24,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.04",
+        "output_cost_per_million": "$0.16",
+        "updated_at": "2025-01-27"
+      },
+      "nCompass": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00005,
+        "price_per_output_token": 0.00015,
+        "throughput": 132.3,
+        "latency": 1.23,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.15",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00005,
+        "price_per_output_token": 0.0002,
+        "throughput": 155.7,
+        "latency": 0.23,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.20",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00005,
+        "price_per_output_token": 0.0002,
+        "throughput": 290.6,
+        "latency": 0.42,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.20",
+        "updated_at": "2025-01-27"
+      },
+      "NovitaAI": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00005,
+        "price_per_output_token": 0.0002,
+        "throughput": 172.5,
+        "latency": 0.47,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.20",
+        "updated_at": "2025-01-27"
+      },
+      "Nebius AI Studio": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00005,
+        "price_per_output_token": 0.0002,
+        "throughput": 72.50,
+        "latency": 0.50,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.20",
+        "updated_at": "2025-01-27"
+      },
+      "Groq": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.0001,
+        "price_per_output_token": 0.0005,
+        "throughput": 4767,
+        "latency": 0.30,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00000007,
+        "price_per_output_token": 0.0000003,
+        "price_per_input_token_batch": 0.000000035,
+        "price_per_output_token_batch": 0.00000015,
+        "throughput": 5000,
+        "latency": 0.8,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.07",
+        "output_cost_per_million": "$0.30",
+        "input_cost_per_million_batch": "$0.035",
+        "output_cost_per_million_batch": "$0.15",
+        "region": "US West (Oregon)",
+        "updated_at": "2025-01-27"
+      },
+      "Azure": {
+        "model_id": "gpt-oss-20b",
+        "price_per_input_token": 0.00000007,
+        "price_per_output_token": 0.0000003,
+        "throughput": 4500,
+        "latency": 0.9,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.07",
+        "output_cost_per_million": "$0.30",
+        "deployment_type": "Preview",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gpt-oss-120b": {
+    "modelName": "GPT-OSS-120B",
+    "modelId": "gpt-oss-120b",
+    "organization": "OpenAI",
+    "providers": {
+      "Chutes": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.000073,
+        "price_per_output_token": 0.00029,
+        "throughput": 237.0,
+        "latency": 2.28,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.073",
+        "output_cost_per_million": "$0.29",
+        "updated_at": "2025-01-27"
+      },
+      "DeepInfra": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00009,
+        "price_per_output_token": 0.00045,
+        "throughput": 117.5,
+        "latency": 0.56,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.09",
+        "output_cost_per_million": "$0.45",
+        "updated_at": "2025-01-27"
+      },
+      "nCompass": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.0001,
+        "price_per_output_token": 0.00045,
+        "throughput": 39.30,
+        "latency": 1.59,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.45",
+        "updated_at": "2025-01-27"
+      },
+      "Baseten": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.0001,
+        "price_per_output_token": 0.0005,
+        "throughput": 305.1,
+        "latency": 0.27,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "NovitaAI": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.0001,
+        "price_per_output_token": 0.0005,
+        "throughput": 121.4,
+        "latency": 0.45,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "AtlasCloud": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.0001,
+        "price_per_output_token": 0.0005,
+        "throughput": 139.8,
+        "latency": 0.44,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.10",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "Crusoe": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.0005,
+        "throughput": 151.0,
+        "latency": 0.56,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.0006,
+        "throughput": 221.0,
+        "latency": 0.82,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.0006,
+        "throughput": 81.95,
+        "latency": 0.37,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "updated_at": "2025-01-27"
+      },
+      "Parasail": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.0006,
+        "throughput": 68.02,
+        "latency": 0.73,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "updated_at": "2025-01-27"
+      },
+      "Nebius AI Studio": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.0006,
+        "throughput": 55.65,
+        "latency": 0.72,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "updated_at": "2025-01-27"
+      },
+      "Groq": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00015,
+        "price_per_output_token": 0.00075,
+        "throughput": 1000,
+        "latency": 0.23,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.75",
+        "updated_at": "2025-01-27"
+      },
+      "Cerebras": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00025,
+        "price_per_output_token": 0.00069,
+        "throughput": 4041,
+        "latency": 0.44,
+        "context": "131K",
+        "max_output_tokens": "33K",
+        "input_cost_per_million": "$0.25",
+        "output_cost_per_million": "$0.69",
+        "updated_at": "2025-01-27"
+      },
+      "AWS Bedrock": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00000015,
+        "price_per_output_token": 0.0000006,
+        "price_per_input_token_batch": 0.000000075,
+        "price_per_output_token_batch": 0.0000003,
+        "throughput": 3000,
+        "latency": 1.2,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "input_cost_per_million_batch": "$0.075",
+        "output_cost_per_million_batch": "$0.30",
+        "region": "US West (Oregon)",
+        "updated_at": "2025-01-27"
+      },
+      "Azure": {
+        "model_id": "gpt-oss-120b",
+        "price_per_input_token": 0.00000015,
+        "price_per_output_token": 0.0000006,
+        "throughput": 2800,
+        "latency": 1.4,
+        "context": "131K",
+        "max_output_tokens": "131K",
+        "input_cost_per_million": "$0.15",
+        "output_cost_per_million": "$0.60",
+        "deployment_type": "Preview",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "claude-3-7-sonnet-20250219": {
+    "modelName": "Claude 3.7 Sonnet",
+    "modelId": "claude-3-7-sonnet-20250219",
+    "organization": "Anthropic",
+    "providers": {
+      "AWS Bedrock": {
+        "model_id": "claude-3-7-sonnet-20250219",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 3000,
+        "latency": 1.0,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      },
+      "Google Vertex": {
+        "model_id": "claude-3-7-sonnet-20250219",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 2800,
+        "latency": 1.1,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "claude-sonnet-4-20250514": {
+    "modelName": "Claude 4 Sonnet",
+    "modelId": "claude-sonnet-4-20250514",
+    "organization": "Anthropic",
+    "providers": {
+      "AWS Bedrock": {
+        "model_id": "claude-sonnet-4-20250514",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 3500,
+        "latency": 0.9,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
+        "region": "US East (Ohio)",
+        "updated_at": "2025-01-27"
+      },
+      "Google Vertex": {
+        "model_id": "claude-sonnet-4-20250514",
+        "price_per_input_token": 0.000003,
+        "price_per_output_token": 0.000015,
+        "price_per_input_token_cache_write": 0.00000375,
+        "price_per_input_token_cache_read": 0.0000003,
+        "throughput": 3200,
+        "latency": 1.0,
+        "context": "200K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$3.00",
+        "output_cost_per_million": "$15.00",
+        "input_cost_per_million_cache_write": "$3.75",
+        "input_cost_per_million_cache_read": "$0.30",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "deepseek-r1": {
+    "modelName": "DeepSeek R1",
+    "modelId": "deepseek-r1",
+    "organization": "DeepSeek",
+    "providers": {
+      "DeepSeek": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 9,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 12,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "deepseek-r1",
+        "price_per_input_token": 0.00000055,
+        "price_per_output_token": 0.00000219,
+        "throughput": 10,
+        "latency": 0.5,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.55",
+        "output_cost_per_million": "$2.19",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.5-pro-preview-0605": {
+    "modelName": "Gemini 2.5 Pro Preview",
+    "modelId": "gemini-2.5-pro-preview-0605",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.5-pro-preview-0605",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000005,
+        "throughput": 100,
+        "latency": 0.5,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$1.00",
+        "output_cost_per_million": "$5.00",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.5-pro-preview-0605",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000005,
+        "throughput": 95,
+        "latency": 0.6,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$1.00",
+        "output_cost_per_million": "$5.00",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.5-flash-preview-0520": {
+    "modelName": "Gemini 2.5 Flash Preview 05-20",
+    "modelId": "gemini-2.5-flash-preview-0520",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.5-flash-preview-0520",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 120,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.5-flash-preview-0520",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 115,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemini-2.0-flash-exp-1206": {
+    "modelName": "Gemini 2.0 Flash",
+    "modelId": "gemini-2.0-flash-exp-1206",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemini-2.0-flash-exp-1206",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 120,
+        "latency": 0.3,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "gemini-2.0-flash-exp-1206",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000025,
+        "throughput": 115,
+        "latency": 0.4,
+        "context": "1M",
+        "max_output_tokens": "8K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "gemma-2-9b": {
+    "modelName": "Gemma 2 9B",
+    "modelId": "gemma-2-9b",
+    "organization": "Google",
+    "providers": {
+      "Google": {
+        "model_id": "gemma-2-9b",
+        "price_per_input_token": 0.00000005,
+        "price_per_output_token": 0.00000005,
+        "throughput": 200,
+        "latency": 0.2,
+        "context": "8K",
+        "max_output_tokens": "2K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.05",
+        "updated_at": "2025-01-27"
+      },
+      "Groq": {
+        "model_id": "gemma-2-9b",
+        "price_per_input_token": 0.00000002,
+        "price_per_output_token": 0.00000002,
+        "throughput": 500,
+        "latency": 0.1,
+        "context": "8K",
+        "max_output_tokens": "2K",
+        "input_cost_per_million": "$0.02",
+        "output_cost_per_million": "$0.02",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "grok-3": {
+    "modelName": "Grok-3",
+    "modelId": "grok-3",
+    "organization": "xAI",
+    "providers": {
+      "xAI": {
+        "model_id": "grok-3",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.00001,
+        "throughput": 28000,
+        "latency": 8.0,
+        "context": "128K",
+        "max_output_tokens": "4K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$10.00",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "grok-3",
+        "price_per_input_token": 0.000002,
+        "price_per_output_token": 0.00001,
+        "throughput": 25000,
+        "latency": 9.0,
+        "context": "128K",
+        "max_output_tokens": "4K",
+        "input_cost_per_million": "$2.00",
+        "output_cost_per_million": "$10.00",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-4-maverick-128e": {
+    "modelName": "Llama 4 Maverick 128e Instruct",
+    "modelId": "llama-4-maverick-128e",
+    "organization": "Meta",
+    "providers": {
+      "Together": {
+        "model_id": "llama-4-maverick-128e",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000005,
+        "throughput": 100,
+        "latency": 0.3,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "llama-4-maverick-128e",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.0000005,
+        "throughput": 120,
+        "latency": 0.25,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$0.50",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-3.1-instant": {
+    "modelName": "Llama 3.1 Instant",
+    "modelId": "llama-3.1-instant",
+    "organization": "Meta",
+    "providers": {
+      "Groq": {
+        "model_id": "llama-3.1-instant",
+        "price_per_input_token": 0.00000005,
+        "price_per_output_token": 0.00000005,
+        "throughput": 1000,
+        "latency": 0.1,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.05",
+        "output_cost_per_million": "$0.05",
+        "updated_at": "2025-01-27"
+      },
+      "Together": {
+        "model_id": "llama-3.1-instant",
+        "price_per_input_token": 0.00000008,
+        "price_per_output_token": 0.00000008,
+        "throughput": 200,
+        "latency": 0.2,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.08",
+        "output_cost_per_million": "$0.08",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "llama-4-scout-16e": {
+    "modelName": "Llama 4 Scout 16e Instruct",
+    "modelId": "llama-4-scout-16e",
+    "organization": "Meta",
+    "providers": {
+      "Together": {
+        "model_id": "llama-4-scout-16e",
+        "price_per_input_token": 0.0000003,
+        "price_per_output_token": 0.0000003,
+        "throughput": 150,
+        "latency": 0.25,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.30",
+        "output_cost_per_million": "$0.30",
+        "updated_at": "2025-01-27"
+      },
+      "Fireworks": {
+        "model_id": "llama-4-scout-16e",
+        "price_per_input_token": 0.0000003,
+        "price_per_output_token": 0.0000003,
+        "throughput": 180,
+        "latency": 0.2,
+        "context": "128K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.30",
+        "output_cost_per_million": "$0.30",
+        "updated_at": "2025-01-27"
+      }
+    }
+  },
+  "qwen-qwq-32b": {
+    "modelName": "QWen-qwq-32b",
+    "modelId": "qwen-qwq-32b",
+    "organization": "Alibaba Cloud",
+    "providers": {
+      "Together": {
+        "model_id": "qwen-qwq-32b",
+        "price_per_input_token": 0.0000008,
+        "price_per_output_token": 0.0000008,
+        "throughput": 80,
+        "latency": 0.4,
+        "context": "32K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.80",
+        "output_cost_per_million": "$0.80",
+        "updated_at": "2025-01-27"
+      },
+      "OpenRouter": {
+        "model_id": "qwen-qwq-32b",
+        "price_per_input_token": 0.0000008,
+        "price_per_output_token": 0.0000008,
+        "throughput": 75,
+        "latency": 0.5,
+        "context": "32K",
+        "max_output_tokens": "32K",
+        "input_cost_per_million": "$0.80",
+        "output_cost_per_million": "$0.80",
+        "updated_at": "2025-01-27"
+      }
+    }
+  }
+  ,
+  "kimi-k2-instruct-0905": {
+    "modelName": "Kimi K2 Instruct 0905",
+    "modelId": "kimi-k2-instruct-0905",
+    "organization": "Moonshot AI",
+    "providers": {
+      "Chutes": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.00000039,
+        "price_per_output_token": 0.0000019,
+        "throughput": 59.61,
+        "latency": 0.92,
+        "input_cost_per_million": "$0.39",
+        "output_cost_per_million": "$1.90",
+        "updated_at": "2025-01-10"
+      },
+      "SiliconFlow": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000004,
+        "price_per_output_token": 0.000002,
+        "throughput": 16.81,
+        "latency": 2.34,
+        "input_cost_per_million": "$0.40",
+        "output_cost_per_million": "$2.00",
+        "updated_at": "2025-01-10"
+      },
+      "DeepInfra": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000005,
+        "price_per_output_token": 0.000002,
+        "throughput": 54.63,
+        "latency": 0.56,
+        "input_cost_per_million": "$0.50",
+        "output_cost_per_million": "$2.00",
+        "updated_at": "2025-01-10"
+      },
+      "Fireworks": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000006,
+        "price_per_output_token": 0.0000025,
+        "throughput": 106.0,
+        "latency": 2.0,
+        "input_cost_per_million": "$0.60",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-10"
+      },
+      "Moonshot AI": {
+        "model_id": "moonshot-v1-256k",
+        "price_per_input_token": 0.0000006,
+        "price_per_output_token": 0.0000025,
+        "price_per_cached_input_token": 0.00000015,
+        "throughput": 17.19,
+        "latency": 2.57,
+        "input_cost_per_million": "$0.60",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-10"
+      },
+      "NovitaAI": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000006,
+        "price_per_output_token": 0.0000025,
+        "throughput": 17.42,
+        "latency": 3.0,
+        "input_cost_per_million": "$0.60",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-10"
+      },
+      "AtlasCloud": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000006,
+        "price_per_output_token": 0.0000025,
+        "throughput": 53.86,
+        "latency": 0.56,
+        "input_cost_per_million": "$0.60",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-10"
+      },
+      "Baseten": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.0000006,
+        "price_per_output_token": 0.0000025,
+        "throughput": 78.95,
+        "latency": 0.5,
+        "input_cost_per_million": "$0.60",
+        "output_cost_per_million": "$2.50",
+        "updated_at": "2025-01-10"
+      },
+      "Together": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000003,
+        "throughput": 23.02,
+        "latency": 0.9,
+        "input_cost_per_million": "$1",
+        "output_cost_per_million": "$3",
+        "updated_at": "2025-01-10"
+      },
+      "Groq": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.000001,
+        "price_per_output_token": 0.000003,
+        "price_per_cached_input_token": 0.0000005,
+        "throughput": 451.2,
+        "latency": 0.41,
+        "input_cost_per_million": "$1",
+        "output_cost_per_million": "$3",
+        "updated_at": "2025-01-10"
+      },
+      "Moonshot AI Turbo": {
+        "model_id": "moonshot-v1-256k-turbo",
+        "price_per_input_token": 0.0000012,
+        "price_per_output_token": 0.000005,
+        "price_per_cached_input_token": 0.0000003,
+        "throughput": 147.4,
+        "latency": 1.3,
+        "input_cost_per_million": "$1.20",
+        "output_cost_per_million": "$5",
+        "updated_at": "2025-01-10"
+      },
+      "Weights & Biases": {
+        "model_id": "moonshotai/Kimi-K2-Instruct-0905",
+        "price_per_input_token": 0.00000135,
+        "price_per_output_token": 0.000004,
+        "throughput": 50.09,
+        "latency": 0.78,
+        "input_cost_per_million": "$1.35",
+        "output_cost_per_million": "$4",
+        "updated_at": "2025-01-10"
+      }
+    }
+  }
+}

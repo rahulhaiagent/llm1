@@ -1,0 +1,46 @@
+{
+  "name": "Together AI",
+  "website": "https://together.ai",
+  "providermodels": [
+    {
+      "model_id": "deepseek-r1",
+      "price_per_input_token": 0.00000055,
+      "price_per_output_token": 0.00000219,
+      "throughput": 12,
+      "latency": 0.4,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-oss-20b",
+      "price_per_input_token": 0.0000002,
+      "price_per_output_token": 0.0000002,
+      "throughput": 100,
+      "latency": 0.3,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "gpt-oss-120b",
+      "price_per_input_token": 0.0000008,
+      "price_per_output_token": 0.0000008,
+      "throughput": 80,
+      "latency": 0.5,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "claude-3-7-sonnet-20250219",
+      "price_per_input_token": 0.000003,
+      "price_per_output_token": 0.000015,
+      "throughput": 45,
+      "latency": 0.6,
+      "updated_at": "2025-01-27"
+    },
+    {
+      "model_id": "grok-4-0709",
+      "price_per_input_token": 0.000003,
+      "price_per_output_token": 0.000015,
+      "throughput": 28000,
+      "latency": 12.0,
+      "updated_at": "2025-01-27"
+    }
+  ]
+}

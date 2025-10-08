@@ -1,0 +1,421 @@
+{
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "logo": "/logos/openai.png",
+      "apiKeyPrefix": "sk-",
+      "models": {
+        "production": [
+          {
+            "id": "gpt-4o",
+            "name": "GPT-4o",
+            "contextLength": 128000,
+            "maxTokens": 16384,
+            "capabilities": ["text", "vision", "reasoning"],
+            "description": "Most advanced GPT-4 model with enhanced capabilities"
+          },
+          {
+            "id": "gpt-4o-mini",
+            "name": "GPT-4o Mini",
+            "contextLength": 128000,
+            "maxTokens": 16384,
+            "capabilities": ["text", "vision"],
+            "description": "Faster, cost-effective version of GPT-4o"
+          },
+          {
+            "id": "gpt-4-turbo",
+            "name": "GPT-4 Turbo",
+            "contextLength": 128000,
+            "maxTokens": 4096,
+            "capabilities": ["text", "vision"],
+            "description": "High-performance GPT-4 with large context window"
+          },
+          {
+            "id": "gpt-4",
+            "name": "GPT-4",
+            "contextLength": 8192,
+            "maxTokens": 4096,
+            "capabilities": ["text"],
+            "description": "Original GPT-4 model"
+          },
+          {
+            "id": "gpt-3.5-turbo",
+            "name": "GPT-3.5 Turbo",
+            "contextLength": 16385,
+            "maxTokens": 4096,
+            "capabilities": ["text"],
+            "description": "Fast and efficient for most tasks"
+          }
+        ],
+        "deprecated": [
+          {
+            "id": "gpt-3.5-turbo-0125",
+            "name": "GPT-3.5 Turbo (0125)",
+            "contextLength": 16385,
+            "maxTokens": 4096,
+            "status": "deprecated"
+          }
+        ]
+      }
+    },
+    "groq": {
+      "name": "Groq",
+      "logo": "/groq.png",
+      "apiKeyPrefix": "gsk_",
+      "models": {
+        "production": [
+          {
+            "id": "llama-3.1-8b-instant",
+            "name": "Llama 3.1 8B Instant",
+            "contextLength": 131072,
+            "maxTokens": 131072,
+            "capabilities": ["text"],
+            "description": "Fast inference for real-time applications",
+            "developer": "Meta"
+          },
+          {
+            "id": "llama-3.3-70b-versatile",
+            "name": "Llama 3.3 70B Versatile",
+            "contextLength": 131072,
+            "maxTokens": 32768,
+            "capabilities": ["text"],
+            "description": "Latest Meta Llama model with enhanced capabilities",
+            "developer": "Meta"
+          },
+          {
+            "id": "meta-llama/llama-guard-4-12b",
+            "name": "Llama Guard 4 12B",
+            "contextLength": 131072,
+            "maxTokens": 1024,
+            "capabilities": ["moderation"],
+            "description": "Content moderation and safety model",
+            "developer": "Meta"
+          },
+          {
+            "id": "openai/gpt-oss-120b",
+            "name": "OpenAI GPT-OSS 120B",
+            "contextLength": 131072,
+            "maxTokens": 65536,
+            "capabilities": ["text", "reasoning", "code"],
+            "description": "OpenAI's flagship open-weight model",
+            "developer": "OpenAI"
+          },
+          {
+            "id": "openai/gpt-oss-20b",
+            "name": "OpenAI GPT-OSS 20B",
+            "contextLength": 131072,
+            "maxTokens": 65536,
+            "capabilities": ["text", "reasoning"],
+            "description": "Smaller OpenAI open-weight model",
+            "developer": "OpenAI"
+          }
+        ],
+        "preview": [
+          {
+            "id": "meta-llama/llama-4-maverick-17b-128e-instruct",
+            "name": "Llama 4 Maverick 17B",
+            "contextLength": 131072,
+            "maxTokens": 8192,
+            "capabilities": ["text"],
+            "description": "Preview Llama 4 model with maverick configuration",
+            "developer": "Meta",
+            "status": "preview"
+          },
+          {
+            "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "name": "Llama 4 Scout 17B",
+            "contextLength": 131072,
+            "maxTokens": 8192,
+            "capabilities": ["text"],
+            "description": "Preview Llama 4 model with scout configuration",
+            "developer": "Meta",
+            "status": "preview"
+          },
+          {
+            "id": "meta-llama/llama-prompt-guard-2-22m",
+            "name": "Llama Prompt Guard 2 22M",
+            "contextLength": 512,
+            "maxTokens": 512,
+            "capabilities": ["moderation"],
+            "description": "Small prompt guard model for input validation",
+            "developer": "Meta",
+            "status": "preview"
+          },
+          {
+            "id": "meta-llama/llama-prompt-guard-2-86m",
+            "name": "Llama Prompt Guard 2 86M",
+            "contextLength": 512,
+            "maxTokens": 512,
+            "capabilities": ["moderation"],
+            "description": "Larger prompt guard model for input validation",
+            "developer": "Meta",
+            "status": "preview"
+          },
+          {
+            "id": "moonshotai/kimi-k2-instruct-0905",
+            "name": "Kimi K2 Instruct",
+            "contextLength": 262144,
+            "maxTokens": 16384,
+            "capabilities": ["text"],
+            "description": "Moonshot AI's instruction-following model",
+            "developer": "Moonshot AI",
+            "status": "preview"
+          },
+          {
+            "id": "playai-tts",
+            "name": "PlayAI TTS",
+            "contextLength": 8192,
+            "maxTokens": 8192,
+            "capabilities": ["text-to-speech"],
+            "description": "Text-to-speech model by PlayAI",
+            "developer": "PlayAI",
+            "status": "preview"
+          },
+          {
+            "id": "playai-tts-arabic",
+            "name": "PlayAI TTS Arabic",
+            "contextLength": 8192,
+            "maxTokens": 8192,
+            "capabilities": ["text-to-speech"],
+            "description": "Arabic text-to-speech model by PlayAI",
+            "developer": "PlayAI",
+            "status": "preview"
+          },
+          {
+            "id": "qwen/qwen3-32b",
+            "name": "Qwen 3 32B",
+            "contextLength": 131072,
+            "maxTokens": 40960,
+            "capabilities": ["text"],
+            "description": "Alibaba Cloud's Qwen 3 model",
+            "developer": "Alibaba Cloud",
+            "status": "preview"
+          }
+        ],
+        "audio": [
+          {
+            "id": "whisper-large-v3",
+            "name": "Whisper Large V3",
+            "capabilities": ["speech-to-text"],
+            "description": "Advanced speech recognition model",
+            "developer": "OpenAI"
+          },
+          {
+            "id": "whisper-large-v3-turbo",
+            "name": "Whisper Large V3 Turbo",
+            "capabilities": ["speech-to-text"],
+            "description": "Faster speech recognition model",
+            "developer": "OpenAI"
+          }
+        ],
+        "systems": [
+          {
+            "id": "groq/compound",
+            "name": "Groq Compound",
+            "contextLength": 131072,
+            "maxTokens": 8192,
+            "capabilities": ["text", "web-search", "code-execution"],
+            "description": "AI system with built-in tools",
+            "developer": "Groq"
+          },
+          {
+            "id": "groq/compound-mini",
+            "name": "Groq Compound Mini",
+            "contextLength": 131072,
+            "maxTokens": 8192,
+            "capabilities": ["text", "web-search", "code-execution"],
+            "description": "Lighter version of Compound system",
+            "developer": "Groq"
+          }
+        ]
+      }
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "logo": "/logos/anthropic.png",
+      "apiKeyPrefix": "sk-ant-",
+      "models": {
+        "production": [
+          {
+            "id": "claude-3-5-sonnet-20241022",
+            "name": "Claude 3.5 Sonnet",
+            "contextLength": 200000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision", "reasoning", "code"],
+            "description": "Most capable Claude model for complex tasks"
+          },
+          {
+            "id": "claude-3-5-haiku-20241022",
+            "name": "Claude 3.5 Haiku",
+            "contextLength": 200000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision"],
+            "description": "Fast and efficient for simple tasks"
+          },
+          {
+            "id": "claude-3-opus-20240229",
+            "name": "Claude 3 Opus",
+            "contextLength": 200000,
+            "maxTokens": 4096,
+            "capabilities": ["text", "vision", "reasoning"],
+            "description": "Powerful model for complex reasoning"
+          }
+        ]
+      }
+    },
+    "google": {
+      "name": "Google",
+      "logo": "/logos/gemini.png",
+      "apiKeyPrefix": "AIza",
+      "models": {
+        "production": [
+          {
+            "id": "gemini-1.5-pro",
+            "name": "Gemini 1.5 Pro",
+            "contextLength": 2000000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision", "audio", "video", "code"],
+            "description": "Google's most capable multimodal model"
+          },
+          {
+            "id": "gemini-1.5-flash",
+            "name": "Gemini 1.5 Flash",
+            "contextLength": 1000000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision", "audio"],
+            "description": "Fast multimodal model for real-time applications"
+          },
+          {
+            "id": "gemini-pro",
+            "name": "Gemini Pro",
+            "contextLength": 32000,
+            "maxTokens": 2048,
+            "capabilities": ["text"],
+            "description": "Text-only Gemini model"
+          }
+        ]
+      }
+    },
+    "openrouter": {
+      "name": "OpenRouter",
+      "logo": "/logos/open-router.svg",
+      "apiKeyPrefix": "sk-or-",
+      "models": {
+        "production": [
+          {
+            "id": "anthropic/claude-3.5-sonnet",
+            "name": "Claude 3.5 Sonnet",
+            "contextLength": 200000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision"],
+            "description": "Claude 3.5 Sonnet via OpenRouter"
+          },
+          {
+            "id": "openai/gpt-4o",
+            "name": "GPT-4o",
+            "contextLength": 128000,
+            "maxTokens": 16384,
+            "capabilities": ["text", "vision"],
+            "description": "GPT-4o via OpenRouter"
+          },
+          {
+            "id": "meta-llama/llama-3.2-90b-instruct",
+            "name": "Llama 3.2 90B",
+            "contextLength": 131072,
+            "maxTokens": 4096,
+            "capabilities": ["text"],
+            "description": "Llama 3.2 90B via OpenRouter"
+          },
+          {
+            "id": "google/gemini-pro-1.5",
+            "name": "Gemini Pro 1.5",
+            "contextLength": 2000000,
+            "maxTokens": 8192,
+            "capabilities": ["text", "vision"],
+            "description": "Gemini Pro 1.5 via OpenRouter"
+          }
+        ]
+      }
+    },
+    "xai": {
+      "name": "xAI",
+      "logo": "/logos/xai.png",
+      "apiKeyPrefix": "xai-",
+      "models": {
+        "production": [
+          {
+            "id": "grok-beta",
+            "name": "Grok Beta",
+            "contextLength": 131072,
+            "maxTokens": 4096,
+            "capabilities": ["text", "reasoning"],
+            "description": "Grok AI model with real-time information access"
+          },
+          {
+            "id": "grok-2-latest",
+            "name": "Grok 2",
+            "contextLength": 131072,
+            "maxTokens": 4096,
+            "capabilities": ["text", "reasoning"],
+            "description": "Latest Grok model with enhanced capabilities"
+          }
+        ]
+      }
+    },
+    "mistral": {
+      "name": "Mistral",
+      "logo": "/logos/Mistral.png",
+      "apiKeyPrefix": "mis_",
+      "models": {
+        "production": [
+          {
+            "id": "mistral-large-latest",
+            "name": "Mistral Large",
+            "contextLength": 32000,
+            "maxTokens": 4096,
+            "capabilities": ["text", "reasoning", "code"],
+            "description": "Mistral's most capable model"
+          },
+          {
+            "id": "mistral-small-latest",
+            "name": "Mistral Small",
+            "contextLength": 32000,
+            "maxTokens": 4096,
+            "capabilities": ["text"],
+            "description": "Efficient model for simple tasks"
+          },
+          {
+            "id": "codestral-latest",
+            "name": "Codestral",
+            "contextLength": 32000,
+            "maxTokens": 4096,
+            "capabilities": ["text", "code"],
+            "description": "Specialized model for code generation"
+          }
+        ]
+      }
+    }
+  },
+  "capabilities": {
+    "text": "Text generation and understanding",
+    "vision": "Image understanding and analysis", 
+    "audio": "Audio processing and generation",
+    "video": "Video understanding and analysis",
+    "code": "Code generation and debugging",
+    "reasoning": "Advanced reasoning and problem solving",
+    "multilingual": "Multiple language support",
+    "moderation": "Content moderation and safety",
+    "web-search": "Real-time web search capabilities",
+    "code-execution": "Code execution environment",
+    "speech-to-text": "Audio transcription",
+    "text-to-speech": "Text to speech synthesis"
+  },
+  "lastUpdated": "2024-12-19",
+  "notes": [
+    "Model IDs should be used exactly as listed for API calls",
+    "Context lengths and max tokens may vary by provider implementation",
+    "Capabilities are general categories - specific features may vary",
+    "Check provider documentation for latest model updates",
+    "Some models may have usage restrictions or require special access"
+  ]
+}
