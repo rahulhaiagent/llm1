@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import React from 'react';
 
 interface NavigationProps {
   className?: string;
@@ -11,6 +12,7 @@ interface NavigationProps {
 export default function Navigation({ className = "" }: NavigationProps) {
   const pathname = usePathname();
   const SHOW_PLAYGROUND = false;
+  const [isMobileOpen, setIsMobileOpen] = React.useState(false);
 
   const isActive = (path: string) => {
     if (!pathname) return false;
@@ -31,6 +33,21 @@ export default function Navigation({ className = "" }: NavigationProps) {
       : `text-gray-600 hover:text-holistic-blurple ${baseClasses}`;
   };
 
+  const NavLinks = () => (
+    <>
+      <Link href="/" className={getLinkClasses('/')}>Home</Link>
+      <Link href="/leaderboard" className={getLinkClasses('/leaderboard')}>Leaderboard</Link>
+      <Link href="/red-teaming" className={getLinkClasses('/red-teaming')}>Red Teaming</Link>
+      <Link href="/recommendations" className={getLinkClasses('/recommendations')}>Recommendations</Link>
+      <Link href="/compare" className={getLinkClasses('/compare')}>Compare</Link>
+      {SHOW_PLAYGROUND && (
+        <Link href="/playground" className={getLinkClasses('/playground')}>Playground</Link>
+      )}
+      <Link href="/providers" className={getLinkClasses('/providers')}>Providers</Link>
+      <Link href="/test-your-llm" className={getLinkClasses('/test-your-llm')}>Test Your LLM</Link>
+    </>
+  );
+
   return (
     <nav className={`bg-white border-b border-gray-200 sticky top-0 z-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,36 +66,32 @@ export default function Navigation({ className = "" }: NavigationProps) {
               <span className="font-semibold text-holistic-deepblue text-lg font-roobert">LLM Decision Hub</span>
             </Link>
           </div>
-          <div className="flex items-center space-x-8">
-            <Link href="/" className={getLinkClasses('/')}>
-              Home
-            </Link>
-            <Link href="/leaderboard" className={getLinkClasses('/leaderboard')}>
-              Leaderboard
-            </Link>
-            
-            <Link href="/red-teaming" className={getLinkClasses('/red-teaming')}>
-              Red Teaming
-            </Link>
-            <Link href="/recommendations" className={getLinkClasses('/recommendations')}>
-              Recommendations
-            </Link>
-            <Link href="/compare" className={getLinkClasses('/compare')}>
-              Compare
-            </Link>
-            {SHOW_PLAYGROUND && (
-              <Link href="/playground" className={getLinkClasses('/playground')}>
-                Playground
-              </Link>
-            )}
-            <Link href="/providers" className={getLinkClasses('/providers')}>
-              Providers
-            </Link>
-           
-
-            <Link href="/test-your-llm" className={getLinkClasses('/test-your-llm')}>
-              Test Your LLM
-            </Link>
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center space-x-8">
+            <NavLinks />
+          </div>
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              aria-label="Toggle menu"
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-holistic-blurple hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-holistic-cerulean"
+            >
+              <svg className={`h-6 w-6 ${isMobileOpen ? 'hidden' : 'block'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg className={`h-6 w-6 ${isMobileOpen ? 'block' : 'hidden'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* Mobile menu panel */}
+      <div className={`md:hidden ${isMobileOpen ? 'block' : 'hidden'} border-t border-gray-200`}> 
+        <div className="px-4 py-3 space-y-3">
+          <div className="flex flex-col space-y-3">
+            <NavLinks />
           </div>
         </div>
       </div>
