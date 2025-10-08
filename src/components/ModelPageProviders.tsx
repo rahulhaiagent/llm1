@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from 'next/image';
 import { ChevronUpIcon, ChevronDownIcon, EyeIcon } from '@heroicons/react/24/outline';
 import modelsByProvider from '../data/models-by-provider.json';
@@ -154,6 +155,7 @@ const ModelPageProviders: React.FC<ModelPageProvidersProps> = ({ modelId }) => {
   };
 
   // Get provider logo path
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getProviderLogo = (providerName: string) => {
     const logoMap: Record<string, string> = {
       'OpenAI': '/openai.png',
@@ -195,6 +197,7 @@ const ModelPageProviders: React.FC<ModelPageProvidersProps> = ({ modelId }) => {
   };
 
   // Get provider fallback initial
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getProviderInitial = (providerName: string) => {
     const initialMap: Record<string, string> = {
       'AWS Bedrock': 'AWS',
